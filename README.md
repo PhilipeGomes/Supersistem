@@ -4,7 +4,8 @@
 O Sistema SuperSystem visa ser usado por lojistas e caixas do setor de SuperMercado para controle de estoque, venda e finanças. Ele tem como intuito auxiliar de forma inteligente o controle geral da loja de forma simples e fácil.
 O SuperSystem será feito como ApiRESTfull utilizando a linguagem Java, utilizando Banco de Dados MySQL
 
-###.Dependências técnicas 
+###Dependências técnicas
+
 ####Front-End 
 Zeplin
 Bootstrap
