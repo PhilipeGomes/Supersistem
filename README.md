@@ -1,4 +1,5 @@
 # Supersistem
+![](Supersistem/Documento de Requisitos/images/image1.png)
 Sistema disciplina sistema software
 
 Sistema supercado -> gestao funcionarios/cliente(banco de funcionarios, ponto, ferias, salario)
