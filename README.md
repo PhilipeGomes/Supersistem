@@ -7,16 +7,16 @@ O SuperSystem será feito como ApiRESTfull utilizando a linguagem Java, utilizan
 ### Dependências técnicas
 
 #### Front-End 
-Zeplin
-Bootstrap
-Thymeleaf
+-Zeplin
+-Bootstrap
+-Thymeleaf
 
-####B ack-End
-Spring Boot
-Postman
-MVC
-Nodes
-Swagger
-Object Json
+#### Back-End
+-Spring Boot
+-Postman
+-MVC
+-Nodes
+-Swagger
+-Object Json
 
 
