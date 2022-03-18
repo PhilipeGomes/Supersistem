@@ -40,7 +40,13 @@ public class ClienteServico {
 	}
 	
 	public ClienteDTO salvar(ClienteDTO clienteDTO) {
-		Cliente cliente = clienteRepositorio.findById(clienteDTO.getId()).get();
+		Cliente cliente = new Cliente();
+		cliente.setCpf(clienteDTO.getCpf());
+		cliente.setNome(clienteDTO.getNome());
+		cliente.setEmail(clienteDTO.getEmail());
+		cliente.setTelefone(clienteDTO.getTelefone());
+		
+		clienteRepositorio.save(cliente);
 		return new ClienteDTO(cliente);
 	}
 	

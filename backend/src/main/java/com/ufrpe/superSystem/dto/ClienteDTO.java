@@ -1,11 +1,5 @@
 package com.ufrpe.superSystem.dto;
 
-import java.io.Serializable;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 import com.ufrpe.superSystem.modelos.Cliente;
 
 //camada responsavel por fazer a comunicação entre a camada de serviço e a camada de controle, sem nenhuma relação com transação, ou banco de dados
@@ -13,11 +7,8 @@ import com.ufrpe.superSystem.modelos.Cliente;
 //dto(data transfer object) -> objeto para transferencia de dados
 //quando a camada de serviço terminar toda orquestração dos dados copiamos os dados das entidades para o tipo dto
 
-public class ClienteDTO implements Serializable{
-	private static final long serialVersionUID = 1L;
+public class ClienteDTO {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String cpf;
