@@ -1,5 +1,9 @@
 package com.ufrpe.superSystem.repositorio;
 
-public interface ClienteRepositorio {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ufrpe.superSystem.modelos.Cliente;
+
+public interface ClienteRepositorio extends JpaRepository<Cliente, Long>{
 
 }

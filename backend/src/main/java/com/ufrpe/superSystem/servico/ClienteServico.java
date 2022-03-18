@@ -1,5 +1,47 @@
 package com.ufrpe.superSystem.servico;
 
-public class ClienteServico {
+import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ufrpe.superSystem.dto.ClienteDTO;
+import com.ufrpe.superSystem.modelos.Cliente;
+import com.ufrpe.superSystem.repositorio.ClienteRepositorio;
+
+@Service
+@Transactional
+public class ClienteServico {
+	
+	//como o framework ja tem um gerenciador de depedencia pra gente essa anotação da conta de instanciar os objetos para chamar os metodos da interface
+	@Autowired
+	private ClienteRepositorio clienteRepositorio;
+	
+	@Transactional(readOnly=true)
+	public List<ClienteDTO> buscarTodos(){
+		List <Cliente> resultado = clienteRepositorio.findAll();
+		List<ClienteDTO> lista = new ArrayList<ClienteDTO>();
+		resultado.forEach(x -> lista.add(new ClienteDTO(x)));
+		return lista;
+	}
+	
+	@Transactional(readOnly=true)
+	public ClienteDTO buscarPeloId(Long id){
+		Cliente resultado = clienteRepositorio.findById(id).get();
+		ClienteDTO dto = new ClienteDTO(resultado);
+		return dto;
+	}
+	
+	public void deletar(Long id) {
+		clienteRepositorio.deleteById(id);
+	}
+	
+	public ClienteDTO salvar(ClienteDTO clienteDTO) {
+		Cliente cliente = clienteRepositorio.findById(clienteDTO.getId()).get();
+		return new ClienteDTO(cliente);
+	}
+	
 }
