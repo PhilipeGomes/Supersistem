@@ -1,0 +1,52 @@
+package com.ufrpe.superSystem.servico;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.ufrpe.superSystem.dto.VendedorDTO;
+import com.ufrpe.superSystem.modelos.Vendedor;
+import com.ufrpe.superSystem.repositorio.VendedorRepositorio;
+
+@Service
+@Transactional
+public class VendedorServico {
+	
+	//como o framework ja tem um gerenciador de depedencia pra gente essa anotação da conta de instanciar os objetos para chamar os metodos da interface
+	@Autowired
+	private VendedorRepositorio vendedorRepositorio;
+	
+	@Transactional(readOnly=true)
+	public List<VendedorDTO> buscarTodos(){
+		List <Vendedor> resultado = vendedorRepositorio.findAll();
+		List<VendedorDTO> lista = new ArrayList<VendedorDTO>();
+		resultado.forEach(x -> lista.add(new VendedorDTO(x)));
+		return lista;
+	}
+	
+	@Transactional(readOnly=true)
+	public VendedorDTO buscarPeloId(Long id){
+		Vendedor resultado = vendedorRepositorio.findById(id).get();
+		VendedorDTO dto = new VendedorDTO(resultado);
+		return dto;
+	}
+	
+	public void deletar(Long id) {
+		vendedorRepositorio.deleteById(id);
+	}
+	
+	public VendedorDTO salvar(VendedorDTO vendedorDTO) {
+		Vendedor vendedor = new Vendedor();
+		vendedor.setNome(vendedorDTO.getNome());
+
+		
+		vendedorRepositorio.save(vendedor);
+		return new VendedorDTO(vendedor);
+	}
+	
+}
