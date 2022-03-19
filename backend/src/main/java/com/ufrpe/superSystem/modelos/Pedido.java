@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 //Objetos monitorados pela ORM -> que é a ferramenta que trabalha com banco de dados, a JPA
 
 @Entity
-@Table(name = "tb_Produto")
+@Table(name = "tb_Pedido")
 public class Pedido implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -22,7 +22,11 @@ public class Pedido implements Serializable{
 	private String total;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant data;
+	@ManyToOne
+  	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
+	@ManyToOne
+    @JoinColumn(name = "vendedor_id")
 	private Vendedor vendedor;
 	
 
