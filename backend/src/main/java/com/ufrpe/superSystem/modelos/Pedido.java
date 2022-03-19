@@ -21,25 +21,27 @@ public class Pedido implements Serializable{
 	private Long id;
 	private String total;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
-    private Instant data;
+    private Instant data_pedido;
 	@ManyToOne
   	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
 	@ManyToOne
     @JoinColumn(name = "vendedor_id")
 	private Vendedor vendedor;
-	
+	private StatusPedido status;
+	// private Set<>
 
 	public Pedido(){
 		
 	}
 
-	public Pedido(Long id, String total, Instant data, Cliente cliente, Vendedor vendedor) {
+	public Pedido(Long id, String total, Instant data_pedido, Cliente cliente, Vendedor vendedor, StatusPedido status) {
 		this.id = id;
 		this.total = total;
-		this.data = data;
+		this.data_pedido = data_pedido;
 		this.cliente = cliente;
 		this.vendedor = vendedor;
+		this.status = status;
 	}
 
 
@@ -59,12 +61,12 @@ public class Pedido implements Serializable{
 		this.total = total;
 	}
 
-	public Instant getData() {
-		return this.data;
+	public Instant getData_pedido() {
+		return this.data_pedido;
 	}
 
-	public void setData(Instant data) {
-		this.data = data;
+	public void setData_pedido(Instant data_pedido) {
+		this.data_pedido = data_pedido;
 	}
 
 	public Cliente getCliente() {
@@ -81,6 +83,14 @@ public class Pedido implements Serializable{
 
 	public void setVendedor(Vendedor vendedor) {
 		this.vendedor = vendedor;
+	}
+
+	public StatusPedido getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(StatusPedido status) {
+		this.status = status;
 	}
 
 }
