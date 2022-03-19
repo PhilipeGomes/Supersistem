@@ -1,15 +1,16 @@
 package com.ufrpe.superSystem.servico;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ufrpe.superSystem.dto.PedidoDTO;
 import com.ufrpe.superSystem.modelos.Pedido;
+import com.ufrpe.superSystem.modelos.StatusPedido;
 import com.ufrpe.superSystem.repositorio.PedidoRepositorio;
 
 @Service
@@ -40,11 +41,11 @@ public class PedidoServico {
 	}
 	
 	public PedidoDTO salvar(PedidoDTO pedidoDTO) {
-		Pedido pedido = new Pedido();
+		Pedido pedido = new Pedido(null, pedidoDTO.getTotal(), Instant.now(),
+		pedidoDTO.getCliente(), pedidoDTO.getVendedor(), StatusPedido.PAGAMENTOPENDENTE);
 		pedido.setCliente(pedidoDTO.getCliente());
-
 		
-		pedidoRepositorio.save(pedido);
+		pedido = pedidoRepositorio.saveAndFlush(pedido);
 		return new PedidoDTO(pedido);
 	}
 	
