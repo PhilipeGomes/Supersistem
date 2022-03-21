@@ -29,4 +29,13 @@ public class ClienteControle {
 		return clienteServico.salvar(dto);
 	}
 	
+	@PutMapping("/{id}/editar")
+	public ClienteDTO editarCliente(@PathVariable Long id, @RequestBody ClienteDTO dto) {
+		return clienteServico.editar(id, dto);
+	}
+	
+	@RequestMapping("/{id}/deletar")
+	public void deletarCliente(@PathVariable Long id) {
+		clienteServico.deletar(id);
+	}
 }
