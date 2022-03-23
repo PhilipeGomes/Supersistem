@@ -16,8 +16,8 @@ import com.ufrpe.superSystem.servico.CategoriaServico;
 
 
 @RestController
-@RequestMapping(value = "/categoria")
-public class CategoriaController {
+@RequestMapping(value = "/categorias")
+public class CategoriaControle {
 	
 	@Autowired
 	private CategoriaServico categoriaServico;
