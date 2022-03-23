@@ -6,6 +6,8 @@ import java.util.Objects;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -31,12 +33,21 @@ public class ItemPedido implements Serializable {
 		this.preco = preco;
 	}
 
-	public ItemPedidoChavePrimaria getId() {
-		return id;
+	@JsonIgnore
+	public Pedido getPedido() {
+		return id.getPedido();
 	}
-
-	public void setId(ItemPedidoChavePrimaria id) {
-		this.id = id;
+	
+	public void setPedido(Pedido pedido) {
+		id.setPedido(pedido);
+	}
+	
+	public Produto getProduto() {
+		return id.getProduto();
+	}
+	
+	public void setProduto(Produto produto) {
+		id.setProduto(produto);
 	}
 
 	public Integer getQuantidade() {
