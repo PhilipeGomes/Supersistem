@@ -32,17 +32,17 @@ public class ProdutoControle {
 	}
 	
 	@PostMapping
-	public ProdutoDTO salvarCliente(@RequestBody ProdutoDTO dto) {
+	public ProdutoDTO salvarProduto(@RequestBody ProdutoDTO dto) {
 		return produtoServico.salvar(dto);
 	}
 	
 	@PutMapping("/{id}/editar")
-	public ProdutoDTO editarCliente(@PathVariable Long id, @RequestBody ProdutoDTO dto) {
+	public ProdutoDTO editarProduto(@PathVariable Long id, @RequestBody ProdutoDTO dto) {
 		return produtoServico.editar(id, dto);
 	}
 
 	@RequestMapping("/{id}/deletar")
-	public void deletarCliente(@PathVariable Long id) {
+	public void deletarProduto(@PathVariable Long id) {
 		produtoServico.deletar(id);
 	}
 
