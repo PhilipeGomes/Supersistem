@@ -43,7 +43,7 @@ public class ProdutoServico {
 		public ProdutoDTO salvar(ProdutoDTO produtoDTO) {
 			Produto produto = new Produto();
 			produto.setNome(produtoDTO.getNome());
-			produto.setQuantidadeEstoque(produtoDTO.getQuantidadeEstoque());
+			produto.setQtdEstoque(produtoDTO.getQtdEstoque());
 			produto.setValor(produtoDTO.getValor());
 			produto.setMarca(produtoDTO.getMarca());
 			
@@ -55,7 +55,7 @@ public class ProdutoServico {
 		public ProdutoDTO editar(Long id, ProdutoDTO produtoDTO) {
 			Produto produto = produtoRepositorio.findById(id).get();
 			produto.setNome(produtoDTO.getNome());
-			produto.setQuantidadeEstoque(produtoDTO.getQuantidadeEstoque());
+			produto.setQtdEstoque(produtoDTO.getQtdEstoque());
 			produto.setValor(produtoDTO.getValor());
 			produto.setMarca(produtoDTO.getMarca());
 			

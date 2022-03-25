@@ -6,8 +6,8 @@ public class ProdutoDTO {
   
     private Long id;
     private String nome;
-    private double valor;
-    private int quantidadeEstoque;
+    private Double valor;
+    private Double qtdEstoque;
     private String marca;
     
     public ProdutoDTO() {
@@ -18,15 +18,15 @@ public class ProdutoDTO {
     	this.id = produto.getId();
 		this.nome = produto.getNome();
 		this.valor = produto.getValor();
-		this.quantidadeEstoque = produto.getQuantidadeEstoque();
+		this.qtdEstoque = produto.getQtdEstoque();
 		this.marca = produto.getMarca();	
     }
 
-	public ProdutoDTO(Long id, String nome, double valor, int quantidadeEstoque, String marca) {		
+	public ProdutoDTO(Long id, String nome, double valor, Double qtdEstoque, String marca) {		
 		this.id = id;
 		this.nome = nome;
 		this.valor = valor;
-		this.quantidadeEstoque = quantidadeEstoque;
+		this.qtdEstoque = qtdEstoque;
 		this.marca = marca;
 	}
 
@@ -54,12 +54,12 @@ public class ProdutoDTO {
 		this.valor = valor;
 	}
 
-	public int getQuantidadeEstoque() {
-		return quantidadeEstoque;
+	public Double getQtdEstoque() {
+		return qtdEstoque;
 	}
 
-	public void setQuantidadeEstoque(int quantidadeEstoque) {
-		this.quantidadeEstoque = quantidadeEstoque;
+	public void setQtdEstoque(Double qtdEstoque) {
+		this.qtdEstoque = qtdEstoque;
 	}
 
 	public String getMarca() {

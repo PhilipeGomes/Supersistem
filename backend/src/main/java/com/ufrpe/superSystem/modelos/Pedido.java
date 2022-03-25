@@ -2,6 +2,8 @@ package com.ufrpe.superSystem.modelos;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -29,7 +31,9 @@ public class Pedido implements Serializable{
     @JoinColumn(name = "vendedor_id")
 	private Vendedor vendedor;
 	private StatusPedido status;
-	// private Set<>
+	
+	@OneToMany(mappedBy = "id")
+	private Set<Produto> produtos = new HashSet<>();
 
 	public Pedido(){
 		
@@ -93,4 +97,8 @@ public class Pedido implements Serializable{
 		this.status = status;
 	}
 
+	public Set<Produto> getProdutos() {
+		return produtos;
+	}
+	
 }

@@ -6,49 +6,41 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "tb_Produto")
+@Table(name = "tb_produto")
 public class Produto implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
-    private double valor;
-    private int quantidadeEstoque;
+    private Double valor;
+    private Double qtdEstoque;
     private String marca;
     
-//    @ManyToMany
-//	@JoinTable(name = "tb_produto_categoria", joinColumns = @JoinColumn(name = "produto_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
-//	private Set<Categoria> categorias = new HashSet<>();
-//    
-//    @OneToMany(mappedBy = "id.produto")
-//	private Set<ItemPedido> itens = new HashSet<>();
+    @ManyToMany
+	@JoinTable(name = "tb_produto_categoria", joinColumns = @JoinColumn(name = "produto_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
+	private Set<Categoria> categorias = new HashSet<>();
+    
+    @OneToMany(mappedBy = "id.produto")
+	private Set<ItemPedido> itens = new HashSet<>();
     
     public Produto() {
     	
     }
 
-	public Produto(Long id, String nome, double valor, int quantidadeEstoque, String marca) {		
+	public Produto(Long id, String nome, double valor, Double qtdEstoque, String marca) {		
 		this.id = id;
 		this.nome = nome;
 		this.valor = valor;
-		this.quantidadeEstoque = quantidadeEstoque;
+		this.qtdEstoque = qtdEstoque;
 		this.marca = marca;		
 	}
 
@@ -77,12 +69,12 @@ public class Produto implements Serializable {
 	}
 	
 
-	public int getQuantidadeEstoque() {
-		return quantidadeEstoque;
+	public Double getQtdEstoque() {
+		return qtdEstoque;
 	}
 
-	public void setQuantidadeEstoque(int quantidadeEstoque) {
-		this.quantidadeEstoque = quantidadeEstoque;
+	public void setQtdEstoque(Double qtdEstoque) {
+		this.qtdEstoque = qtdEstoque;
 	}
 
 	public String getMarca() {
