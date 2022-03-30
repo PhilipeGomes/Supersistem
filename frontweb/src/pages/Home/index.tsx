@@ -12,6 +12,7 @@ import ButtonIcon from 'components/ButtonIcon';
 import { Link } from 'react-router-dom';
 
 import img1 from '../../assets/images/img1.png';
+import img2 from '../../assets/images/img2.jpg';
 
 import './styles.css';
 
@@ -22,26 +23,20 @@ const Home = () => {
       <MDBCarousel showControls showIndicators dark fade>
         <MDBCarouselInner>
           <MDBCarouselItem className='active'>
-            <MDBCarouselElement src={img1} alt='...' className='d-block w-100' width="190" height="450"/>
+            <MDBCarouselElement src={img2} alt='...' className='d-block w-100' width="190" height="450"/>
             <MDBCarouselCaption>
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
 
           <MDBCarouselItem>
-            <MDBCarouselElement src='https://mdbootstrap.com/img/Photos/Slides/img%20(35).webp' alt='...' className='d-block w-100' with='1' width="190" height="450"/>
+            <MDBCarouselElement src={img1} alt='...' className='d-block w-100' with='1' width="190" height="450"/>
             <MDBCarouselCaption>
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
 
           <MDBCarouselItem>
             <MDBCarouselElement src='https://mdbootstrap.com/img/Photos/Slides/img%20(40).webp' alt='...' className='d-block w-100' with='1' width="193" height="400"/>
             <MDBCarouselCaption>
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>
