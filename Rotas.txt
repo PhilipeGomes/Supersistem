@@ -1,0 +1,71 @@
+get
+http://localhost:8080/clientes 
+http://localhost:8080/produtos 
+http://localhost:8080/vendedores
+http://localhost:8080/pedidos
+http://localhost:8080/clientes/1
+
+POST
+http://localhost:8080/clientes
+{
+    "nome": "Marie Curie",
+    "cpf" : "114.222.333-44",
+    "telefone": "3030-2023",
+    "email": "marie_curie@ufrpe.com"
+}
+
+http://localhost:8080/vendedores
+{
+    "nome": "Gregor Mendel"
+}
+http://localhost:8080/pedidos
+{
+    "total": "xx",
+    "cliente":
+        {
+            "id": 4,
+            "nome": "Marie Curie",
+            "cpf" : "114.222.333-44",
+            "telefone": "3030-2023",
+            "email": "marie_curie@ufrpe.com"
+        },
+    "vendedor":
+        {
+            "id": 1,
+            "nome": "Gregor Mendel"
+        }
+}
+
+http://localhost:8080/produtos
+{
+    "nome": "Macarrão",
+    "valor": 10,
+    "quantidadeEstoque": 10,
+    "marca": "Vitarella"
+}
+
+PUT
+http://localhost:8080/clientes/1/editar
+
+    {
+        "id": 3,
+        "nome": "Isaac Newton",
+        "cpf": "222.222.333-44",
+        "telefone": "3030-2022",
+        "email": "isacc_newton@ufrpe.com"
+    }
+
+http://localhost:8080/produtos/3/editar
+
+    {
+        "id": 3,
+        "nome": "Macarrão",
+        "valor": 10.0,
+        "quantidadeEstoque": 10,
+        "marca": "MassaBoa"
+    }
+
+DELETE	
+http://localhost:8080/clientes/1/deletar
+
+http://localhost:8080/produtos/2/deletar
