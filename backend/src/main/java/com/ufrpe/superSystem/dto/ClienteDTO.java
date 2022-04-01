@@ -8,17 +8,17 @@ import com.ufrpe.superSystem.modelos.Cliente;
 //quando a camada de serviço terminar toda orquestração dos dados copiamos os dados das entidades para o tipo dto
 
 public class ClienteDTO {
-	
+
 	private Long id;
 	private String nome;
 	private String cpf;
 	private String telefone;
 	private String email;
 
-	public ClienteDTO(){
-		
+	public ClienteDTO() {
+
 	}
-	
+
 	public ClienteDTO(Cliente cliente) {
 		this.id = cliente.getId();
 		this.nome = cliente.getNome();
@@ -26,7 +26,7 @@ public class ClienteDTO {
 		this.telefone = cliente.getTelefone();
 		this.email = cliente.getEmail();
 	}
-	
+
 	public ClienteDTO(Long id, String nome, String cpf, String telefone, String email) {
 		this.id = id;
 		this.nome = nome;

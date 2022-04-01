@@ -1,12 +1,10 @@
 package com.ufrpe.superSystem.servico;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.transaction.annotation.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ufrpe.superSystem.dto.ClienteDTO;
 import com.ufrpe.superSystem.modelos.Cliente;
@@ -22,11 +20,9 @@ public class ClienteServico {
 	private ClienteRepositorio clienteRepositorio;
 
 	@Transactional(readOnly = true)
-	public List<ClienteDTO> buscarTodos() {
-		List<Cliente> resultado = clienteRepositorio.findAll();
-		List<ClienteDTO> lista = new ArrayList<ClienteDTO>();
-		resultado.forEach(x -> lista.add(new ClienteDTO(x)));
-		return lista;
+	public Page<ClienteDTO> buscarTodos(Pageable pageable) {
+		Page<Cliente> resultado = clienteRepositorio.findAll(pageable);
+	    return resultado.map(res -> new ClienteDTO(res));
 	}
 
 	@Transactional(readOnly = true)
