@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 
 import img1 from '../../assets/images/img1.png';
 import img2 from '../../assets/images/img2.jpg';
+import img3 from '../../assets/images/img3.jpg';
 
 import './styles.css';
 
@@ -29,13 +30,13 @@ const Home = () => {
           </MDBCarouselItem>
 
           <MDBCarouselItem>
-            <MDBCarouselElement src={img1} alt='...' className='d-block w-100' with='1' width="190" height="450"/>
+            <MDBCarouselElement src={img3} alt='...' className='d-block w-100' with='1' width="190" height="450"/>
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>
 
           <MDBCarouselItem>
-            <MDBCarouselElement src='https://mdbootstrap.com/img/Photos/Slides/img%20(40).webp' alt='...' className='d-block w-100' with='1' width="193" height="400"/>
+            <MDBCarouselElement src={img1} alt='...' className='d-block w-100' with='1' width="193" height="400"/>
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>

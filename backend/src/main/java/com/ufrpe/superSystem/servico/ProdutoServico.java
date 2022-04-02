@@ -46,6 +46,9 @@ public class ProdutoServico {
 			produto.setQtdEstoque(produtoDTO.getQtdEstoque());
 			produto.setValor(produtoDTO.getValor());
 			produto.setMarca(produtoDTO.getMarca());
+			produto.setImgUrl(produtoDTO.getImgUrl());
+			produto.setDescricao(produtoDTO.getDescricao());
+			produto.setUndVenda(produtoDTO.getUndVenda());
 			
 			produtoRepositorio.save(produto);
 			return new ProdutoDTO(produto);
@@ -58,6 +61,9 @@ public class ProdutoServico {
 			produto.setQtdEstoque(produtoDTO.getQtdEstoque());
 			produto.setValor(produtoDTO.getValor());
 			produto.setMarca(produtoDTO.getMarca());
+			produto.setImgUrl(produtoDTO.getImgUrl());
+			produto.setDescricao(produtoDTO.getDescricao());
+			produto.setUndVenda(produtoDTO.getUndVenda());
 			
 			produtoRepositorio.save(produto);
 			return new ProdutoDTO(produto);
