@@ -1,13 +1,10 @@
 package com.ufrpe.superSystem.servico;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.transaction.annotation.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ufrpe.superSystem.dto.VendedorDTO;
 import com.ufrpe.superSystem.modelos.Vendedor;
@@ -21,12 +18,10 @@ public class VendedorServico {
 	@Autowired
 	private VendedorRepositorio vendedorRepositorio;
 	
-	@Transactional(readOnly=true)
-	public List<VendedorDTO> buscarTodos(){
-		List <Vendedor> resultado = vendedorRepositorio.findAll();
-		List<VendedorDTO> lista = new ArrayList<VendedorDTO>();
-		resultado.forEach(x -> lista.add(new VendedorDTO(x)));
-		return lista;
+	@Transactional(readOnly = true)
+	public Page<VendedorDTO> buscarTodos(Pageable pageable) {		
+		Page<Vendedor> resultado = vendedorRepositorio.findAll(pageable);
+	    return resultado.map(res -> new VendedorDTO(res));
 	}
 	
 	@Transactional(readOnly=true)

@@ -1,9 +1,8 @@
 package com.ufrpe.superSystem.servico;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,11 +18,9 @@ public class CategoriaServico {
 	private CategoriaRepositorio categoriaRepositorio;
 
 	@Transactional(readOnly = true)
-	public List<CategoriaDTO> buscarTodos() {
-		List<Categoria> resultado = categoriaRepositorio.findAll();
-		List<CategoriaDTO> lista = new ArrayList<CategoriaDTO>();
-		resultado.forEach(x -> lista.add(new CategoriaDTO(x)));
-		return lista;
+	public Page<CategoriaDTO> buscarTodos(Pageable pageable) {		
+		Page<Categoria> resultado = categoriaRepositorio.findAll(pageable);
+	    return resultado.map(res -> new CategoriaDTO(res));
 	}
 
 	@Transactional(readOnly = true)
