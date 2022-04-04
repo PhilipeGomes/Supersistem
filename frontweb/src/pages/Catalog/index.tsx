@@ -18,7 +18,7 @@ const Catalog = () => {
   useEffect(() => {
     const params: AxiosParams = {
       method: 'GET',
-      url: `${BASE_URL}/products`,
+      url: `${BASE_URL}/produtos`,
       params: {
         page: 0,
         size: 12,
@@ -45,7 +45,7 @@ const Catalog = () => {
         {isLoading ? <CardLoader /> : (
           page?.content.map((product) => (
           <div className="col-sm-6 col-lg-4 col-xl-3" key={product.id}>
-            <Link to="/products/1">
+            <Link to={"/produtos/" + product.id}>
               <ProductCard product={product} />
             </Link>
           </div>

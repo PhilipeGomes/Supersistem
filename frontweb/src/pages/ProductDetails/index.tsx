@@ -23,7 +23,7 @@ const ProductDetails = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`${BASE_URL}/products/${productId}`)
+      .get(`${BASE_URL}/produtos/${productId}`)
       .then((response) => {
         setProduct(response.data);
       })
@@ -48,11 +48,11 @@ const ProductDetails = () => {
             ) : (
               <>
                 <div className="img-container">
-                  <img src={product?.imgUrl} alt={product?.name} />
+                  <img src={product?.imgUrl} alt={product?.nome} />
                 </div>
                 <div className="name-price-container">
-                  <h1>{product?.name}</h1>
-                  {product && <ProductPrice price={product?.price} />}
+                  <h1>{product?.nome}</h1>
+                  {product && <ProductPrice price={product?.valor} />}
                 </div>
               </>
             )}
@@ -63,7 +63,7 @@ const ProductDetails = () => {
             ) : (
               <div className="description-container">
                 <h2>Descrição do produto</h2>
-                <p>{product?.description}</p>
+                <p>{product?.descricao}</p>
               </div>
             )}
           </div>
