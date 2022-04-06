@@ -32,12 +32,15 @@ def procurar(url):
             nome = item.find("span", class_= "vtex-product-summary-2-x-productBrand vtex-product-summary-2-x-brandName t-body").get_text()
             preco = item.find("span", class_= "vtex-productShowCasePrice").get_text()
             preco = str(preco).replace('\xa0','')
+            img = item.find("img", class_="vtex-product-summary-2-x-imageNormal vtex-product-summary-2-x-image").get('src')
+            #print(img)
             qtd = nome.split()[-1]
             qtdEstoque = random.randint(0,100)
             produto.append(nome)
             produto.append(preco)
             produto.append(qtd)
             produto.append(qtdEstoque)
+            produto.append(img)
             todosProdutos.append(produto)
 
     #         print(nome + "Preco " + preco + " Quantidade " + qtd+"Quantidade em Estoque",qtdEstoque)
