@@ -42,7 +42,7 @@ def procurar(url):
             produto.append(qtdEstoque)
             produto.append(img)
             todosProdutos.append(produto)
-
+            print(produto)
     #         print(nome + "Preco " + preco + " Quantidade " + qtd+"Quantidade em Estoque",qtdEstoque)
 cont = 1
 for link in urls:
