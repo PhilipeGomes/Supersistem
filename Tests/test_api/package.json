@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "full_tests": "mocha run/full_tests.js",
-    "full-tests-report": "mocha run/full-tests.js --reporter mochawesome --reporter-options inline=true,code=false,autoOpen=true,charts=true,overwrite=false"
+    "full_tests_report": "mocha run/full_tests.js --reporter mochawesome --reporter-options inline=true,code=false,autoOpen=true,charts=true,overwrite=true"
   },
   "author": "",
   "license": "ISC",

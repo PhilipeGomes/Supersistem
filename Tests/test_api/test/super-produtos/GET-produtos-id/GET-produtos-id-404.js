@@ -18,13 +18,13 @@ module.exports = function (){
                 done()
             })
     })
-    // it("GET /produtos/id - 404 Not found - Deleted 'Produto'", function (done){
-    //     chai.request(host)
-    //         .get('/produtos/'+ variables.produtos.deleted_id)
-    //         .end(function(err, res){
-    //             expect(err).to.be.null;
-    //             expect(res.statusCode).to.be.equal(404)
-    //             done()
-    //         })
-    // })
+    it("GET /produtos/id - 404 Not found - Deleted 'Produto'", function (done){
+        chai.request(host)
+            .get('/produtos/'+9)
+            .end(function(err, res){
+                expect(err).to.be.null;
+                expect(res.statusCode).to.be.equal(404)
+                done()
+            })
+    })
 }

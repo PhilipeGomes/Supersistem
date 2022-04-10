@@ -17,8 +17,11 @@ module.exports = function (){
                 expect(err).to.be.null;
                 expect(res.statusCode).to.be.equal(200)
                 res.body.content.forEach(element => {
-                   // let product =
+                    if (element.nome == config.valid_produto_request_body.nome) {
+                        variables.produtos.created_id = element.id
+                    }
                 });
+                expect(variables.produtos.created_id).to.be.not.equal(null)
                 done()
             })
     })
@@ -30,7 +33,6 @@ module.exports = function (){
             .end(function(err, res){
                 expect(err).to.be.null;
                 expect(res.statusCode).to.be.equal(200)
-                console.log(res.body)
                 done()
             })
     })

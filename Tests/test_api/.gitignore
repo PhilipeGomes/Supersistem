@@ -1,5 +1,5 @@
 # api testing
-/mochawesome-report
+#/mochawesome-report
 /package-lock.json
 
 # Dependency directories
