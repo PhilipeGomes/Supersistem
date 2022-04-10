@@ -1,0 +1,7 @@
+{
+     "produtos": {
+          "valid_id": 1,
+          "inexistent_id": 99,
+          "string_id": "Sting"
+     }
+}

@@ -1,0 +1,6 @@
+# api testing
+Tests/test_api/mochawesome-report
+Tests/test_api/package-lock.json
+
+# Dependency directories
+Tests/test_api/node_modules/
