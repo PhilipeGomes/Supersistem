@@ -11,7 +11,7 @@ const host = constants.global_variables.super_api
 module.exports = function (){
     it("DELETE /produtos/id - 200 success - Delete created product", function (done){
         chai.request(host)
-            .get('/produtos/'+ variables.produtos.created_id + '/deletar')
+            .delete('/produtos/'+ variables.produtos.created_id + '/deletar')
             .end(function(err, res){
                 expect(err).to.be.null;
                 expect(res.statusCode).to.be.equal(200)

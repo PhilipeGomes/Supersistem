@@ -10,21 +10,21 @@ chai.use(chaiHttp)
 const host = constants.global_variables.super_api
 
 module.exports = function (){
-    after("Geting inserted product id", function(done){
-        chai.request(host)
-            .get('/produtos')
-            .end(function(err, res){
-                expect(err).to.be.null;
-                expect(res.statusCode).to.be.equal(200)
-                res.body.content.forEach(element => {
-                    if (element.nome == config.valid_produto_request_body.nome) {
-                        variables.produtos.created_id = element.id
-                    }
-                });
-                expect(variables.produtos.created_id).to.be.not.equal(null)
-                done()
-            })
-    })
+    // after("Geting inserted product id", function(done){
+    //     chai.request(host)
+    //         .get('/produtos')
+    //         .end(function(err, res){
+    //             expect(err).to.be.null;
+    //             expect(res.statusCode).to.be.equal(200)
+    //             res.body.content.forEach(element => {
+    //                 if (element.nome == config.valid_produto_request_body.nome) {
+    //                     variables.produtos.created_id = element.id
+    //                 }
+    //             });
+    //             expect(variables.produtos.created_id).to.be.not.equal(null)
+    //             done()
+    //         })
+    // })
 
     it("POST /produtos - 200 success - Valid 'Produto'", function (done){
         chai.request(host)
@@ -33,6 +33,7 @@ module.exports = function (){
             .end(function(err, res){
                 expect(err).to.be.null;
                 expect(res.statusCode).to.be.equal(200)
+                variables.produtos.created_id = res.body.id
                 done()
             })
     })

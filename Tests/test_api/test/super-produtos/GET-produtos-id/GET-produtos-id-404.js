@@ -14,6 +14,7 @@ module.exports = function (){
             .get('/produtos/'+ variables.produtos.inexistent_id)
             .end(function(err, res){
                 expect(err).to.be.null;
+                console.log(res.body)
                 expect(res.statusCode).to.be.equal(404)
                 done()
             })
