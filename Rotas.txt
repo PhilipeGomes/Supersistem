@@ -1,9 +1,11 @@
 get
 http://localhost:8080/clientes 
 http://localhost:8080/produtos 
+http://localhost:8080/produtos/1 
 http://localhost:8080/vendedores
 http://localhost:8080/pedidos
 http://localhost:8080/clientes/1
+
 
 POST
 http://localhost:8080/clientes
@@ -38,13 +40,25 @@ http://localhost:8080/pedidos
 
 http://localhost:8080/produtos
 {
-    "nome": "Macarrão",
+    "nome": "Açucar",
     "valor": 10,
+    "qtdEstoque" : 10,
     "quantidadeEstoque": 10,
-    "marca": "Vitarella"
+    "marca": "Vitarella",
+    "imgUrl": "xxxxxx",
+    "descricao": "Feijao bom",
+    "undVenda": "1 kg",
+    "categorias": [
+        {
+            "id":1
+        }
+    ]
 }
 
+
+
 PUT
+
 http://localhost:8080/clientes/1/editar
 
     {
@@ -57,13 +71,23 @@ http://localhost:8080/clientes/1/editar
 
 http://localhost:8080/produtos/3/editar
 
-    {
-        "id": 3,
-        "nome": "Macarrão",
-        "valor": 10.0,
-        "quantidadeEstoque": 10,
-        "marca": "MassaBoa"
-    }
+{
+    "nome": "Feijão",
+    "valor": 10.0,
+    "qtdEstoque": 15,
+    "marca": "Vitarella",
+    "imgUrl": "xxxxxx",
+    "descricao": "Feijao bom",
+    "undVenda": "1 kg",
+    "categorias": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        }
+    ]
+}
 
 DELETE	
 http://localhost:8080/clientes/1/deletar

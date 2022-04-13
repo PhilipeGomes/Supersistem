@@ -14,3 +14,13 @@ INSERT INTO tb_produto(nome, valor, qtd_estoque, marca, img_url, descricao, und_
 INSERT INTO tb_pedido(total, data_pedido, cliente_id, vendedor_id, status) VALUES ('teste','2021-01-01T12:00:00Z', 1, 1, 0);
 INSERT INTO tb_pedido(total, data_pedido, cliente_id, vendedor_id, status) VALUES ('teste1','2021-01-01T12:00:00Z', 2, 2, 0);
 INSERT INTO tb_pedido(total, data_pedido, cliente_id, vendedor_id, status) VALUES ('teste2','2021-01-01T12:00:00Z', 3, 1, 0);
+
+INSERT INTO tb_categoria(nome) VALUES ('Alimento');
+INSERT INTO tb_categoria(nome) VALUES ('Livros');
+INSERT INTO tb_categoria(nome) VALUES ('Eletrônico');
+INSERT INTO tb_categoria(nome) VALUES ('Computadores');
+
+INSERT INTO tb_produto_categoria(produto_id, categoria_id) VALUES ( 1, 1);
+INSERT INTO tb_produto_categoria(produto_id, categoria_id) VALUES ( 2, 3);
+INSERT INTO tb_produto_categoria(produto_id, categoria_id) VALUES ( 3, 4);
+INSERT INTO tb_produto_categoria(produto_id, categoria_id) VALUES ( 4, 2);
