@@ -5,10 +5,7 @@
   margin-right: 3%;
   min-height: 500px;
   background-color: white;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: gray;
-  border-width: 1px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   text-align: center;
 }
 
@@ -26,6 +23,7 @@
   display: flex;
   padding: 4px;
   width: 400px;
+  
   
 }
 
