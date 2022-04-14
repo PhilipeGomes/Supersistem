@@ -26,10 +26,10 @@ const Routes = () => (
       <Route path="/products" exact>
         <Catalog />
       </Route>
-      <Route path="/produtos/:productId">
+      <Route path="/produtos/:productId" >
         <ProductDetails />
       </Route>
-      <Redirect from="/admin" to="/admin/products" exact />
+      <Redirect from="/admin" to="/admin/produtos" exact />
       <Route path="/admin">
         <Admin />
       </Route>

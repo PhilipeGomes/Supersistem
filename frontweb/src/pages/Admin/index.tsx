@@ -1,5 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar';
+import Produtos from './Produtos';
 
 import './styles.css';
 
@@ -9,8 +10,8 @@ const Admin = () => {
       <Navbar />
       <div className="admin-content">
         <Switch>
-          <Route path="/admin/products">
-            <h1>Product CRUD</h1>
+          <Route path="/admin/produtos">
+            <Produtos/>
           </Route>
           <Route path="/admin/categories">
             <h1>Category CRUD</h1>
