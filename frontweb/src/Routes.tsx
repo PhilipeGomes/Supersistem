@@ -3,6 +3,8 @@ import Home from 'pages/Home';
 import Navbar from 'components/Navbar';
 import Catalog from 'pages/Catalog';
 import Admin from 'pages/Admin';
+import Form from 'pages/Cadastro';
+import Login from 'pages/Login';
 import ProductDetails from 'pages/ProductDetails';
 import 'bootstrap';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -14,6 +16,12 @@ const Routes = () => (
     <Switch>
       <Route path="/" exact>
         <Home />
+      </Route>
+      <Route path="/form" exact>
+        <Form />
+      </Route>
+      <Route path="/login" exact>
+        <Login />
       </Route>
       <Route path="/products" exact>
         <Catalog />
