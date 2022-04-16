@@ -20,10 +20,13 @@
 
 .cadastro input{
 
-  display: flex;
-  padding: 4px;
-  width: 400px;
-  
+  border-radius: 10px;
+  font-size: 1em;
+  letter-spacing: -0.015em;
+  color: #262626;
+  height: 50px;
+  border: 1px solid #ced4da;
+  appearance: none
   
 }
 

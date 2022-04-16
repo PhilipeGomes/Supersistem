@@ -23,7 +23,7 @@ const Home = () => {
           
           <label id="email">Email:</label>
           
-          <input type="text" id="email" name="email"/>
+          <input type="text" id="email" name="email" placeholder="email@gmail.com"/>
           
           <label id="senha">Senha</label>
           

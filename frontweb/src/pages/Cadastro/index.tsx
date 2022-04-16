@@ -24,11 +24,11 @@ const Home = () => {
           <h1>Cadastre-se</h1>
           <label id="nome">Nome:</label>
           
-          <input type="text" id="nome" name="nome"/>
+          <input type="text" id="nome" name="nome" placeholder="Seu Nome"/>
         
           <label id="login">Login:</label>
           
-          <input type="text" id="login" name="login"/>
+          <input type="text" id="login" name="login" placeholder="Login"/>
           
           <label id="cpf">CPF:</label>
           
