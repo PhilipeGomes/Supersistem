@@ -1,33 +1,49 @@
 import ProductCrudCard from "pages/Admin/Produtos/ProdutoCrudCard";
 import "./styles.css";
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SpringPage } from "types/vendor/spring";
 import { Product } from "types/product";
-import { AxiosParams } from "types/vendor/axios";
-import { BASE_URL } from "util/requests";
-import axios from "axios";
+import { requestBackend } from "util/requests";
+import { AxiosRequestConfig } from "axios";
+import Pagination from "components/Pagination";
+
+type ControlComponentsData = {
+    activePage: number;
+}
 
 const Lista = () => {
 
     const [page, setPage] = useState<SpringPage<Product>>();
 
-    useEffect(() => {
-        const params: AxiosParams = {
+    const [controlComponentsData, setControlComponentsData] = useState<ControlComponentsData>(
+        {
+            activePage: 0
+        }
+    );
+
+    const handlePageChange = (pageNumber: number) => {
+        setControlComponentsData({ activePage: pageNumber });
+    }
+
+    const getProducts = useCallback(() => {
+        const config: AxiosRequestConfig = {
             method: 'GET',
-            url: `${BASE_URL}/produtos`,
+            url: '/produtos',
             params: {
-                page: 0,
-                size: 12,
+                page: controlComponentsData.activePage,
+                size: 8,
             },
         };
 
-        axios(params)
-            .then((response) => {
-                setPage(response.data);
-            })
-    }, []);
+        requestBackend(config).then((response) => {
+            setPage(response.data);
+        });
+    }, [controlComponentsData]);
 
+    useEffect(() => {
+        getProducts();
+    }, [getProducts]);
 
     return (
         <div className="product-crud-container">
@@ -48,10 +64,14 @@ const Lista = () => {
                         </div>
                     ))}
             </div>
-
+            <Pagination
+                pageCount={(page) ? page.totalPages : 0}
+                range={3}
+                onChange={handlePageChange}
+            />
         </div>
 
-    )
-}
+    );
+};
 
 export default Lista;

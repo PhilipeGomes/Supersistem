@@ -1,16 +1,19 @@
 import './styles.css';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { Product } from 'types/product';
 import { requestBackend } from 'util/requests';
 import { AxiosRequestConfig } from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import img_sem_foto from 'assets/images/sem_foto.png';
+import Select from 'react-select';
+import { Category } from 'types/category';
+import CurrencyInput from 'react-currency-input-field';
 
 
 type UrlParams = {
     produtoId: string;
-  };
+};
 
 const Formulario = () => {
 
@@ -20,49 +23,53 @@ const Formulario = () => {
 
     const history = useHistory();
 
+    const [selectCategorias, SetSelectCategorias] = useState<Category[]>([])
+
     const {
         register,
         handleSubmit,
         formState: { errors },
         setValue,
+        control,
     } = useForm<Product>();
 
     useEffect(() => {
-        if(isEditing) {
-            requestBackend({ url: `produtos/${produtoId}`})
-            .then((response) => {
-                const produto = response.data as Product;
-                setValue('nome', produto.nome);
-                setValue('valor', produto.valor);
-                setValue('descricao', produto.descricao);
-                setValue('qtdEstoque', produto.qtdEstoque);
-                setValue('marca', produto.marca);
-                setValue('undVenda', produto.undVenda);
-                setValue('imgUrl', produto.imgUrl);
-                setValue('categorias', produto.categorias);
-            });
+        requestBackend({ url: '/categorias' })
+            .then(response => {
+                SetSelectCategorias(response.data.content);
+            })
+    }, []);
+
+    useEffect(() => {
+        if (isEditing) {
+            requestBackend({ url: `produtos/${produtoId}` })
+                .then((response) => {
+                    const produto = response.data as Product;
+                    setValue('nome', produto.nome);
+                    setValue('valor', produto.valor);
+                    setValue('descricao', produto.descricao);
+                    setValue('qtdEstoque', produto.qtdEstoque);
+                    setValue('marca', produto.marca);
+                    setValue('undVenda', produto.undVenda);
+                    setValue('imgUrl', produto.imgUrl);
+                    setValue('categorias', produto.categorias);
+                });
         }
-    }, [isEditing, produtoId,setValue]);
+    }, [isEditing, produtoId, setValue]);
 
     const onSubmit = (formData: Product) => {
 
-        const data = {
-            ...formData,
-            imgUrl : isEditing
-            ? formData.imgUrl
-            : 'https://www.goiania.go.leg.br/imagens/sem-foto/image_view_fullscreen',
-            categoria : isEditing ? formData.categorias : [{id: 1, nome: ''}],
-        }
+        const data = { ...formData, valor: String(formData.valor).replace(',', '.') }
 
         const config: AxiosRequestConfig = {
             method: isEditing ? 'PUT' : 'POST',
             url: isEditing ? `/produtos/${produtoId}/editar` : '/produtos',
-            data
+            data,
         };
 
         requestBackend(config).then(() => {
             history.push("/admin/produtos");
-            });
+        });
     };
 
 
@@ -94,20 +101,26 @@ const Formulario = () => {
                             </div>
 
                             <div className="margin-bottom-30">
-                                <input {...register('valor', {
-                                    required: 'Campo Obrigaório'
-                                })}
-                                    type="text"
-                                    className={`form-control base-input ${errors.valor ? 'is-invalid' : ''
-                                        }`}
-                                    placeholder="Preço"
+                                <Controller
                                     name="valor"
+                                    rules={{ required: 'Campo Obrigaório' }}
+                                    control={control}
+                                    render={({ field }) => (
+                                        <CurrencyInput
+                                            placeholder="Preço"
+                                            className={`form-control base-input ${errors.valor ? 'is-invalid' : ''
+                                                }`}
+                                            disableGroupSeparators={true}
+                                            value={field.value}
+                                            onValueChange={field.onChange}
+                                        />
+                                    )}
                                 />
                                 <div className="invalid-feedback d-block">
                                     {errors.valor?.message}
                                 </div>
                             </div>
-                            
+
                             <div className="margin-bottom-30">
                                 <input {...register('qtdEstoque', {
                                     required: 'Campo Obrigaório'
@@ -122,6 +135,7 @@ const Formulario = () => {
                                     {errors.qtdEstoque?.message}
                                 </div>
                             </div>
+
                             <div className="margin-bottom-30">
                                 <input {...register('marca', {
                                     required: 'Campo Obrigaório'
@@ -136,6 +150,7 @@ const Formulario = () => {
                                     {errors.marca?.message}
                                 </div>
                             </div>
+
                             <div className="margin-bottom-30">
                                 <input {...register('undVenda', {
                                     required: 'Campo Obrigaório'
@@ -150,7 +165,52 @@ const Formulario = () => {
                                     {errors.undVenda?.message}
                                 </div>
                             </div>
+
+                            <div className="margin-bottom-30">
+                                <Controller
+                                    name="categorias"
+                                    rules={{ required: true }}
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Select {...field}
+                                            options={selectCategorias}
+                                            classNamePrefix="product-crud-select"
+                                            isMulti
+                                            getOptionLabel={(categoria: Category) => categoria.nome}
+                                            getOptionValue={(categora: Category) => String(categora.id)}
+
+                                        />
+                                    )}
+                                />
+                                {errors.categorias && (
+                                    <div className="invalid-feedback d-block">
+                                        Campo obrigatório
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="margin-bottom-30">
+                                <input {...register('imgUrl', {
+                                    required: 'Campo obrigatório',
+                                    pattern: {
+                                        value: /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/gm,
+                                        message: 'Deve ser uma url valida'
+                                    }
+                                })}
+                                    type="text"
+                                    className={`form-control base-input ${errors.imgUrl ? 'is-invalid' : ''
+                                        }`}
+                                    placeholder="URL da imagem do produto"
+                                    name="imgUrl"
+                                />
+                                <div className="invalid-feedback d-block">
+                                    {errors.imgUrl?.message}
+                                </div>
+                            </div>
+
+
                         </div>
+
                         <div className="col-lg-6">
                             <div>
                                 <textarea
@@ -170,9 +230,9 @@ const Formulario = () => {
                         </div>
                     </div>
                     <div className="product-crud-buttons-container">
-                        <button 
-                        className="btn btn-outline-danger product-crud-button"
-                        onClick={handleCancel}
+                        <button
+                            className="btn btn-outline-danger product-crud-button"
+                            onClick={handleCancel}
                         >CANCELAR</button>
                         <button className="btn btn-outline-primary product-crud-button">SALVAR</button>
                     </div>
