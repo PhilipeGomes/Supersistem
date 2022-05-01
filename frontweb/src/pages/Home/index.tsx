@@ -24,13 +24,13 @@ const Home = () => {
       <MDBCarousel showControls showIndicators dark fade>
         <MDBCarouselInner>
           <MDBCarouselItem className='active'>
-            <MDBCarouselElement src={img2} alt='...' className='d-block w-100' width="190" height="450"/>
+            <MDBCarouselElement src={img2} alt='...' className='d-block w-100' width="193" height="400"/>
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>
 
           <MDBCarouselItem>
-            <MDBCarouselElement src={img3} alt='...' className='d-block w-100' with='1' width="190" height="450"/>
+            <MDBCarouselElement src={img3} alt='...' className='d-block w-100' with='1' width="193" height="400"/>
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>
