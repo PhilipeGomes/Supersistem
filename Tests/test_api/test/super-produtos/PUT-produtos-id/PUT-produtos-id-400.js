@@ -28,23 +28,13 @@ module.exports = function (){
                 expect(res.statusCode).to.be.equal(200)
             })
     })
-    it("PUT /produtos/id - 200 success - Edit inseted product", function (done){
+    it("PUT /produtos/id - 400 success - Invalid edit inseted product(valor)", function (done){
         chai.request(host)
             .put('/produtos/'+ variables.produtos.created_id_to_update + '/editar')
-            .send(config.edit_produto_request_body)
+            .send(config.invalid_edit_produto_request_body)
             .end(function(err, res){
                 expect(err).to.be.null;
-                expect(res.statusCode).to.be.equal(200)
-                done()
-            })
-    })
-    it("PUT /produtos/id - 200 success - Edit inseted product - Not sending paramiter(nome)", function (done){
-        chai.request(host)
-            .put('/produtos/'+ variables.produtos.created_id_to_update + '/editar')
-            .send(config.edit_produto_request_body_not_sending_paramiter)
-            .end(function(err, res){
-                expect(err).to.be.null;
-                expect(res.statusCode).to.be.equal(200)
+                expect(res.statusCode).to.be.equal(400)
                 done()
             })
     })
