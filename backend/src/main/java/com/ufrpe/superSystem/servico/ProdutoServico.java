@@ -1,7 +1,8 @@
 package com.ufrpe.superSystem.servico;
 
 
-import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
@@ -26,11 +27,12 @@ public class ProdutoServico {
 		private CategoriaRepositorio categoriaRepositorio;
 		
 		@Transactional(readOnly = true)
-		public Page<ProdutoDTO> buscarTodos(Pageable pageable) {			
-			Page<Produto> resultado = produtoRepositorio.findAll(pageable);
+		public Page<ProdutoDTO> buscarTodos(Long idCategoria, String nome, Pageable pageable) {		
+			List<Categoria> categorias = (idCategoria == 0) ? null : Arrays.asList(categoriaRepositorio.getById(idCategoria));
+			Page<Produto> resultado = produtoRepositorio.buscar(categorias, nome,pageable);
 			//transformo a pagina em lista -> usa stream porque apesar de page ser um stream lista não é
-			produtoRepositorio.buscarCategoriasProdutos(resultado.stream().collect(Collectors.toList()));
-		    return resultado.map(res -> new ProdutoDTO(res));
+			produtoRepositorio.buscarCategoriasProdutos(resultado.getContent());
+		    return resultado.map(x -> new ProdutoDTO(x,  x.getCategorias()));
 		}
 		
 		@Transactional(readOnly=true)

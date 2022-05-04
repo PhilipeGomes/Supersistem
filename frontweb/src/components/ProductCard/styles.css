@@ -20,4 +20,8 @@
 .card-bottom-container h6 {
   font-size: 18px;
   color: #263238;
+  max-height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

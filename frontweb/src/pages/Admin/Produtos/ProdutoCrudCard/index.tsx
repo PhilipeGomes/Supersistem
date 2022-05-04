@@ -9,9 +9,10 @@ import { requestBackend } from 'util/requests';
 
 type Props = {
     product: Product;
+    onDelete: Function;
 }
 
-const ProductCrudCard = ({ product }: Props) => {
+const ProductCrudCard = ({ product, onDelete }: Props) => {
 
     const handleDelete = (produtoId: number) => {
 
@@ -25,7 +26,7 @@ const ProductCrudCard = ({ product }: Props) => {
         };
 
         requestBackend(config).then(() => {
-            console.log("DELETADO ID " + produtoId);
+            onDelete();
         });
     }
 
