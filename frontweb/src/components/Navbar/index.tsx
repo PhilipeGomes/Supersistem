@@ -40,6 +40,16 @@ const Navbar = () => {
                 ADMIN
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/login" activeClassName="active">
+                LOGIN
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/carrinho" activeClassName="active">
+                🛒
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

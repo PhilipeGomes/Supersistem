@@ -31,6 +31,8 @@ const Home = () => {
 
           <button type="button">Logar</button> 
           <button type="button">Perdi a senha</button> 
+          <br></br>
+          <a href="/form">Não possuo cadastro</a>
           
         </form>
         </div>
