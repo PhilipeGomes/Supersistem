@@ -56,7 +56,6 @@ const Catalog = () => {
             </div>
           )))}
       </div>
-
       <div className="row">
         <Pagination
           pageCount={(page) ? page.totalPages : 0}

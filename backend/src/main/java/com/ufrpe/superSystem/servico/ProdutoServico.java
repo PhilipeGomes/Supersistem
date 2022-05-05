@@ -1,10 +1,12 @@
 package com.ufrpe.superSystem.servico;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +20,7 @@ import com.ufrpe.superSystem.servico.excecao.RecursoNaoLocalizadoExcecao;
 
 @Service
 @Transactional
-public class ProdutoServico {
+public class ProdutoServico {	
 
 	// como o framework ja tem um gerenciador de depedencia pra gente essa anotação
 	// da conta de instanciar os objetos para chamar os metodos da interface
@@ -28,12 +30,14 @@ public class ProdutoServico {
 	private CategoriaRepositorio categoriaRepositorio;
 
 	@Transactional(readOnly = true)
-	public Page<ProdutoDTO> buscarTodos(Pageable pageable) {
-		Page<Produto> resultado = produtoRepositorio.findAll(pageable);
+	public Page<ProdutoDTO> buscarTodos(Long idCategoria, String nome, Pageable pageable) {
+		List<Categoria> categorias = (idCategoria == 0) ? null
+				: Arrays.asList(categoriaRepositorio.getById(idCategoria));
+		Page<Produto> resultado = produtoRepositorio.buscar(categorias, nome, pageable);
 		// transformo a pagina em lista -> usa stream porque apesar de page ser um
 		// stream lista não é
-		produtoRepositorio.buscarCategoriasProdutos(resultado.stream().collect(Collectors.toList()));
-		return resultado.map(res -> new ProdutoDTO(res));
+		produtoRepositorio.buscarCategoriasProdutos(resultado.getContent());
+		return resultado.map(x -> new ProdutoDTO(x, x.getCategorias()));
 	}
 
 	@Transactional(readOnly = true)

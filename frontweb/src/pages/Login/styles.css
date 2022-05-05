@@ -53,6 +53,9 @@
   
 }
 
+img {
+  width: 200px;
+}
 
 .cadastro #logoCadastro{
   display: block;

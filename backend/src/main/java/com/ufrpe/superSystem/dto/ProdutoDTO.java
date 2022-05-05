@@ -35,7 +35,7 @@ public class ProdutoDTO {
 		this.descricao = produto.getDescricao();
 		this.undVenda = produto.getUndVenda();
 
-		categorias = produto.getCategorias().stream().map(x -> new CategoriaDTO(x)).collect(Collectors.toList());
+		//categorias = produto.getCategorias().stream().map(x -> new CategoriaDTO(x)).collect(Collectors.toList());
 	}
 
 	public ProdutoDTO(Long id, String nome, double valor, Double qtdEstoque, String marca, String imgUrl,
@@ -50,6 +50,7 @@ public class ProdutoDTO {
 		this.undVenda = undVenda;
 	}
 
+	
 	public ProdutoDTO(Produto produto, Set<Categoria> categoria) {
 		this(produto);
 		categoria.forEach(cat -> this.categorias.add(new CategoriaDTO(cat)));
@@ -125,6 +126,6 @@ public class ProdutoDTO {
 
 	public void setCategorias(List<CategoriaDTO> categorias) {
 		this.categorias = categorias;
-	}
+	}	
 
 }
