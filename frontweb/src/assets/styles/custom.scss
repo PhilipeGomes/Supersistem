@@ -1,5 +1,7 @@
 $theme-colors: (
-  'primary': #b5cce2,
+  'primary': #4169E1,
+  'danger': #DF5753,
+  'secondary': #9E9E9E
 );
 
 $body-bg: #F2F2F2;
@@ -23,12 +25,12 @@ $body-color: #263238;
   position:relative;
   height:20vh;
   text-align:center;
-  background-color: #b5cce2;
+  background-color: #4169E1;
 }
 .content a{
   color: white;
   text-align:center;
-  background-color: #b5cce2;
+  background-color: #4169E1;
 }
 
 .content img{

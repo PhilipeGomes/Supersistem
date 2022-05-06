@@ -1,5 +1,11 @@
 package com.ufrpe.superSystem.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import com.ufrpe.superSystem.modelos.Categoria;
 import com.ufrpe.superSystem.modelos.Produto;
 
 public class ProdutoDTO {
@@ -12,6 +18,8 @@ public class ProdutoDTO {
 	private String imgUrl;
 	private String descricao;
 	private String undVenda;
+	
+	private List<CategoriaDTO> categorias = new ArrayList<>();
 
 	public ProdutoDTO() {
 
@@ -26,6 +34,8 @@ public class ProdutoDTO {
 		this.imgUrl = produto.getImgUrl();
 		this.descricao = produto.getDescricao();
 		this.undVenda = produto.getUndVenda();
+		
+		//categorias = produto.getCategorias().stream().map(x -> new CategoriaDTO(x)).collect(Collectors.toList());
 	}
 
 	public ProdutoDTO(Long id, String nome, double valor, Double qtdEstoque, String marca, String imgUrl,
@@ -39,6 +49,13 @@ public class ProdutoDTO {
 		this.descricao = descricao;
 		this.undVenda = undVenda;
 	}
+	
+	public ProdutoDTO(Produto produto, Set<Categoria> categoria ) {
+		this(produto);
+		categoria.forEach(cat -> this.categorias.add(new CategoriaDTO(cat)));
+	}
+	
+	
 
 	public Long getId() {
 		return id;
@@ -103,5 +120,14 @@ public class ProdutoDTO {
 	public void setUndVenda(String undVenda) {
 		this.undVenda = undVenda;
 	}
+
+	public List<CategoriaDTO> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(List<CategoriaDTO> categorias) {
+		this.categorias = categorias;
+	}
+	
 
 }

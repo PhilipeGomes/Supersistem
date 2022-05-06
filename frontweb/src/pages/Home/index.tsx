@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom';
 import img1 from '../../assets/images/img1.png';
 import img2 from '../../assets/images/img2.jpg';
 import img3 from '../../assets/images/img3.jpg';
+import img4 from '../../assets/images/img4.png';
+import img5 from '../../assets/images/img5.png';
 
 import './styles.css';
 
@@ -24,13 +26,13 @@ const Home = () => {
       <MDBCarousel showControls showIndicators dark fade>
         <MDBCarouselInner>
           <MDBCarouselItem className='active'>
-            <MDBCarouselElement src={img2} alt='...' className='d-block w-100' width="190" height="450"/>
+            <MDBCarouselElement src={img2} alt='...' className='d-block w-100' width="193" height="400"/>
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>
 
           <MDBCarouselItem>
-            <MDBCarouselElement src={img3} alt='...' className='d-block w-100' with='1' width="190" height="450"/>
+            <MDBCarouselElement src={img3} alt='...' className='d-block w-100' with='1' width="190" height="400"/>
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>
@@ -40,6 +42,19 @@ const Home = () => {
             <MDBCarouselCaption>
             </MDBCarouselCaption>
           </MDBCarouselItem>
+
+          <MDBCarouselItem>
+            <MDBCarouselElement src={img4} alt='...' className='d-block w-100' with='1' width="190" height="400"/>
+            <MDBCarouselCaption>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+
+          <MDBCarouselItem>
+            <MDBCarouselElement src={img5} alt='...' className='d-block w-100' with='1' width="190" height="400"/>
+            <MDBCarouselCaption>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+
         </MDBCarouselInner>
       </MDBCarousel>
       </div>

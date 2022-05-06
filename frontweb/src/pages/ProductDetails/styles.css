@@ -68,6 +68,12 @@
     font-size: 0.6em;
 }
 
+.name-price-cart-container {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (min-width: 576px) {
     .product-details-container {
         padding: 20px;

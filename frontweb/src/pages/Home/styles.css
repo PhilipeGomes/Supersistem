@@ -128,3 +128,10 @@
     width: 480px;
   }
 }
+
+
+.d-block {
+  margin-top: 10px;
+  object-fit: contain;
+  
+}

@@ -1,0 +1,492 @@
+{
+    "(1, 0)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/164209-163-163?v=637517007811670000&width=163&height=163&aspect=true",
+        "nome":"Arroz Parboilizado Emoções Pacote 1Kg ",
+        "quantidadedeEstoque":15,
+        "undVenda":"1Kg",
+        "valor":"R$4,29"
+    },
+    "(1, 1)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/171275-163-163?v=637602195653400000&width=163&height=163&aspect=true",
+        "nome":"Açúcar Cristal Ipojuca Pacote 1kg ",
+        "quantidadedeEstoque":48,
+        "undVenda":"1kg",
+        "valor":"R$3,89"
+    },
+    "(1, 2)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/179471-163-163?v=637668978637670000&width=163&height=163&aspect=true",
+        "nome":"Leite em Pó Integral Ninho Forti+ Nestlé Pacote 750g ",
+        "quantidadedeEstoque":83,
+        "undVenda":"750g",
+        "valor":"R$28,99"
+    },
+    "(1, 3)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/162828-163-163?v=637493457973670000&width=163&height=163&aspect=true",
+        "nome":"Macarrão de Sêmola Espaguete Fino Vitarella Pacote 500g ",
+        "quantidadedeEstoque":2,
+        "undVenda":"500g",
+        "valor":"R$2,89"
+    },
+    "(1, 4)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155854-163-163?v=637460619227030000&width=163&height=163&aspect=true",
+        "nome":"Feijão Carioca Kicaldo Pacote 1Kg ",
+        "quantidadedeEstoque":23,
+        "undVenda":"1Kg",
+        "valor":"R$7,89"
+    },
+    "(1, 5)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/186334-163-163?v=637802084140400000&width=163&height=163&aspect=true",
+        "nome":"Pão Francês ",
+        "quantidadedeEstoque":0,
+        "undVenda":"Francês",
+        "valor":"R$0,84"
+    },
+    "(1, 6)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155995-163-163?v=637460620091100000&width=163&height=163&aspect=true",
+        "nome":"Café Torrado e Moído Tradicional Pilão Pacote a Vácuo 250g ",
+        "quantidadedeEstoque":99,
+        "undVenda":"250g",
+        "valor":"R$7,39"
+    },
+    "(1, 7)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155869-163-163?v=637460619316670000&width=163&height=163&aspect=true",
+        "nome":"Creme de Leite Piracanjuba Caixa 200g ",
+        "quantidadedeEstoque":74,
+        "undVenda":"200g",
+        "valor":"R$3,29"
+    },
+    "(1, 8)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155477-163-163?v=637460616984330000&width=163&height=163&aspect=true",
+        "nome":"Arroz Branco Camil Pacote 1kg ",
+        "quantidadedeEstoque":57,
+        "undVenda":"1kg",
+        "valor":"R$4,99"
+    },
+    "(1, 9)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170278-163-163?v=637565356759800000&width=163&height=163&aspect=true",
+        "nome":"Farinha de Milho Flocão Vitamilho Pacote 500g ",
+        "quantidadedeEstoque":100,
+        "undVenda":"500g",
+        "valor":"R$1,70"
+    },
+    "(2, 0)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/174288-163-163?v=637636305852170000&width=163&height=163&aspect=true",
+        "nome":"Banheira de Gato Pop Cores Sortidas Furacão Pet 1 Unidade ",
+        "quantidadedeEstoque":78,
+        "undVenda":"Unidade",
+        "valor":"R$14,90"
+    },
+    "(2, 1)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170718-163-163?v=637577378373170000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos Carne e Vegetais Balance Premium Especial Pouch 1kg ",
+        "quantidadedeEstoque":16,
+        "undVenda":"1kg",
+        "valor":"R$24,99"
+    },
+    "(2, 10)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/162156-163-163?v=637491880782070000&width=163&height=163&aspect=true",
+        "nome":"Arroz Branco 100% Grãos Nobres Tio João Pacote 1kg ",
+        "quantidadedeEstoque":59,
+        "undVenda":"1kg",
+        "valor":"R$6,29"
+    },
+    "(2, 11)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155922-163-163?v=637460619624370000&width=163&height=163&aspect=true",
+        "nome":"Macarrão Instantâneo Galinha Caipira Nissin Miojo Lámen 85g ",
+        "quantidadedeEstoque":9,
+        "undVenda":"85g",
+        "valor":"R$1,79"
+    },
+    "(2, 12)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163006-163-163?v=637496174436470000&width=163&height=163&aspect=true",
+        "nome":"Açúcar Cristal Petribu Pacote 1kg ",
+        "quantidadedeEstoque":14,
+        "undVenda":"1kg",
+        "valor":"R$4,29"
+    },
+    "(2, 13)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155987-163-163?v=637460620041700000&width=163&height=163&aspect=true",
+        "nome":"Café Solúvel Granulado Clássico Santa Clara Sachê 50g Refil Econômico ",
+        "quantidadedeEstoque":22,
+        "undVenda":"Econômico",
+        "valor":"R$3,00"
+    },
+    "(2, 14)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163380-163-163?v=637496215721570000&width=163&height=163&aspect=true",
+        "nome":"Farinha de Milho Flocão Nordestino Farinha de Milho São Braz Pacote 500g ",
+        "quantidadedeEstoque":70,
+        "undVenda":"500g",
+        "valor":"R$1,89"
+    },
+    "(2, 15)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163022-163-163?v=637496174565300000&width=163&height=163&aspect=true",
+        "nome":"Arroz Parboilizado Pop Pacote 1kg ",
+        "quantidadedeEstoque":64,
+        "undVenda":"1kg",
+        "valor":"R$4,09"
+    },
+    "(2, 16)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/162834-163-163?v=637493458003070000&width=163&height=163&aspect=true",
+        "nome":"Macarrão de Sêmola Parafuso Vitarella Speciale Pacote 500g ",
+        "quantidadedeEstoque":17,
+        "undVenda":"500g",
+        "valor":"R$3,99"
+    },
+    "(2, 17)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/171450-163-163?v=637604887990930000&width=163&height=163&aspect=true",
+        "nome":"Farinha de Trigo Finna Tradicional Pacote 1kg ",
+        "quantidadedeEstoque":98,
+        "undVenda":"1kg",
+        "valor":"R$4,99"
+    },
+    "(2, 18)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163119-163-163?v=637496175234300000&width=163&height=163&aspect=true",
+        "nome":"Feijão Carioca Turquesa 1kg ",
+        "quantidadedeEstoque":88,
+        "undVenda":"1kg",
+        "valor":"R$7,79"
+    },
+    "(2, 19)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/164619-163-163?v=637517760144400000&width=163&height=163&aspect=true",
+        "nome":"Farinha de Trigo Sarandi Pacote 1kg ",
+        "quantidadedeEstoque":16,
+        "undVenda":"1kg",
+        "valor":"R$3,95"
+    },
+    "(2, 2)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/179129-163-163?v=637668977396230000&width=163&height=163&aspect=true",
+        "nome":"Alimento Úmida para Gatos Adultos Sabor Demi Glace com Frango Fancy Feast Purina Sachê 85g ",
+        "quantidadedeEstoque":31,
+        "undVenda":"85g",
+        "valor":"R$5,39"
+    },
+    "(2, 3)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170988-163-163?v=637592736786770000&width=163&height=163&aspect=true",
+        "nome":"Petisco para Cães Bifinhos Sabor Carne Petitos Sachê 60g ",
+        "quantidadedeEstoque":59,
+        "undVenda":"60g",
+        "valor":"R$3,45"
+    },
+    "(2, 4)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/171052-163-163?v=637595437683570000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Original Dunga Pacote 7kg ",
+        "quantidadedeEstoque":81,
+        "undVenda":"7kg",
+        "valor":"R$31,90"
+    },
+    "(2, 5)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/160635-163-163?v=637474466647670000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos 1+ Peixe Whiskas Pacote 3kg ",
+        "quantidadedeEstoque":0,
+        "undVenda":"3kg",
+        "valor":"R$56,99"
+    },
+    "(2, 6)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170748-163-163?v=637577478055930000&width=163&height=163&aspect=true",
+        "nome":"Arranhador de Papelão para Gatos Furacão Pet ",
+        "quantidadedeEstoque":73,
+        "undVenda":"Pet",
+        "valor":"R$33,50"
+    },
+    "(2, 7)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/160454-163-163?v=637474465476330000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos 1+ Frango Whiskas Pacote 1kg ",
+        "quantidadedeEstoque":49,
+        "undVenda":"1kg",
+        "valor":"R$27,99"
+    },
+    "(2, 8)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/179275-163-163?v=637668977876430000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos Salmão e Carne Fantastic Mix Purina Felix Sachê 85g ",
+        "quantidadedeEstoque":60,
+        "undVenda":"85g",
+        "valor":"R$3,69"
+    },
+    "(2, 9)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/161466-163-163?v=637474472629230000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Filhotes Carne ao Molho Pedigree Sachê 100g ",
+        "quantidadedeEstoque":66,
+        "undVenda":"100g",
+        "valor":"R$2,99"
+    },
+    "(3, 10)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/187975-163-163?v=637819989484330000&width=163&height=163&aspect=true",
+        "nome":"Ração para Cães Adultos Raças Pequenas Max Vita Buffet Pacote 3kg ",
+        "quantidadedeEstoque":66,
+        "undVenda":"3kg",
+        "valor":"R$55,99"
+    },
+    "(3, 11)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170696-163-163?v=637577378272000000&width=163&height=163&aspect=true",
+        "nome":"Shampoo para Cães e Gatos com Ervas Bulldog Frasco 500ml ",
+        "quantidadedeEstoque":100,
+        "undVenda":"500ml",
+        "valor":"R$18,50"
+    },
+    "(3, 12)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/180433-163-163?v=637680249605870000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos 7+ Todos os Tamanhos Carne, Frango e Arroz Dog Chow Extra Life Purina Pacote 1kg ",
+        "quantidadedeEstoque":50,
+        "undVenda":"1kg",
+        "valor":"R$18,99"
+    },
+    "(3, 13)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170171-163-163?v=637551233403300000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Raças Médias e Grandes Sabor Carne e Vegetais Premium Especial Balance Pacote 10,1kg ",
+        "quantidadedeEstoque":38,
+        "undVenda":"10,1kg",
+        "valor":"R$119,99"
+    },
+    "(3, 14)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/179265-163-163?v=637668977828270000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Carne Fantastic Tiritas Felix Purina Sachê 85g Novo ",
+        "quantidadedeEstoque":66,
+        "undVenda":"Novo",
+        "valor":"R$3,69"
+    },
+    "(3, 15)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/180435-163-163?v=637680249620230000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Raças Minis e Pequenas Carne, Frango e Arroz Dog Chow Extra Life Purina Pacote 1kg ",
+        "quantidadedeEstoque":79,
+        "undVenda":"1kg",
+        "valor":"R$18,99"
+    },
+    "(3, 16)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/160677-163-163?v=637474466961000000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Raças Médias e Grandes Carne, Frango e Cereais Pedigree Pacote 10,1kg ",
+        "quantidadedeEstoque":86,
+        "undVenda":"10,1kg",
+        "valor":"R$119,99"
+    },
+    "(3, 17)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/169936-163-163?v=637547138440170000&width=163&height=163&aspect=true",
+        "nome":"Patê para Cães Filhotes Carne e Frango Pedigree Lata 280g ",
+        "quantidadedeEstoque":38,
+        "undVenda":"280g",
+        "valor":"R$9,29"
+    },
+    "(3, 18)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/187970-163-163?v=637819989472930000&width=163&height=163&aspect=true",
+        "nome":"Desinfetante Lysoform Pets Suave Odor Frasco 1l ",
+        "quantidadedeEstoque":21,
+        "undVenda":"1l",
+        "valor":"R$14,50"
+    },
+    "(3, 19)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170705-163-163?v=637577378312330000&width=163&height=163&aspect=true",
+        "nome":"Pipi Dog Auxiliar de Adestramento Sanitário dos Cães Coveli Caixa 20ml ",
+        "quantidadedeEstoque":11,
+        "undVenda":"20ml",
+        "valor":"R$12,90"
+    },
+    "(3, 20)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/162728-163-163?v=637493457439400000&width=163&height=163&aspect=true",
+        "nome":"Extrato de Tomate Concentrado Arisco Extratomato Caixa 370g ",
+        "quantidadedeEstoque":39,
+        "undVenda":"370g",
+        "valor":"R$2,55"
+    },
+    "(3, 21)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163321-163-163?v=637496215358600000&width=163&height=163&aspect=true",
+        "nome":"Biscoito Wafer com Recheio de Chocolate Treloso Vitarella Pacote 35g ",
+        "quantidadedeEstoque":93,
+        "undVenda":"35g",
+        "valor":"R$0,75"
+    },
+    "(3, 22)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163743-163-163?v=637516135856300000&width=163&height=163&aspect=true",
+        "nome":"Pão de Forma Tradicional Bella Vita Pacote 450g ",
+        "quantidadedeEstoque":23,
+        "undVenda":"450g",
+        "valor":"R$5,39"
+    },
+    "(3, 23)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/155855-163-163?v=637460619232630000&width=163&height=163&aspect=true",
+        "nome":"Feijão Preto Camil Pacote 1kg ",
+        "quantidadedeEstoque":62,
+        "undVenda":"1kg",
+        "valor":"R$8,89"
+    },
+    "(3, 24)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/162603-163-163?v=637493456808500000&width=163&height=163&aspect=true",
+        "nome":"Biscoito com Recheio de Morango Treloso Vitarella Pacote 130g ",
+        "quantidadedeEstoque":2,
+        "undVenda":"130g",
+        "valor":"R$1,39"
+    },
+    "(3, 25)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163111-163-163?v=637496175178500000&width=163&height=163&aspect=true",
+        "nome":"Farinha de Milho Flocão Dona Clara Premium Pacote 500g ",
+        "quantidadedeEstoque":20,
+        "undVenda":"500g",
+        "valor":"R$1,49"
+    },
+    "(3, 26)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/165212-163-163?v=637521100022900000&width=163&height=163&aspect=true",
+        "nome":"Biscoito Doce Rosquinha de Coco Vitarella Pacote 350g ",
+        "quantidadedeEstoque":18,
+        "undVenda":"350g",
+        "valor":"R$4,19"
+    },
+    "(3, 27)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/176027-163-163?v=637650691945330000&width=163&height=163&aspect=true",
+        "nome":"Achocolatado em Pó Nescau Sabor e Energia Nestlé Lata 370g ",
+        "quantidadedeEstoque":31,
+        "undVenda":"370g",
+        "valor":"R$5,99"
+    },
+    "(3, 28)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/163114-163-163?v=637496175197530000&width=163&height=163&aspect=true",
+        "nome":"Farinha de Trigo Finna Pacote 1kg ",
+        "quantidadedeEstoque":94,
+        "undVenda":"1kg",
+        "valor":"R$4,59"
+    },
+    "(3, 29)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170843-163-163?v=637578084884700000&width=163&height=163&aspect=true",
+        "nome":"Pão Francês Integral Aprox. 60g ",
+        "quantidadedeEstoque":26,
+        "undVenda":"60g",
+        "valor":"R$1,07"
+    },
+    "(4, 20)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/178591-163-163?v=637668975829230000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Raças Pequenas Frango ao Molho Dog Chow Purina Sachê 100g ",
+        "quantidadedeEstoque":86,
+        "undVenda":"100g",
+        "valor":"R$2,89"
+    },
+    "(4, 21)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/187979-163-163?v=637819989492970000&width=163&height=163&aspect=true",
+        "nome":"Ração para Gatos Castrados Max Vita Selection Pacote 3kg ",
+        "quantidadedeEstoque":10,
+        "undVenda":"3kg",
+        "valor":"R$32,99"
+    },
+    "(4, 22)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/180439-163-163?v=637680249634300000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Raças Médias e Grandes Carne, Frango e Arroz Dog Chow Extra Life Purina Pacote 3kg ",
+        "quantidadedeEstoque":61,
+        "undVenda":"3kg",
+        "valor":"R$55,99"
+    },
+    "(4, 23)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170100-163-163?v=637547174763200000&width=163&height=163&aspect=true",
+        "nome":"Alimento Úmida para Cães Adultos Sabor Filé Mignon Cesar Sachê 85g ",
+        "quantidadedeEstoque":27,
+        "undVenda":"85g",
+        "valor":"R$3,69"
+    },
+    "(4, 24)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/186135-163-163?v=637800913509000000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Cães Adultos Raças Pequenas Pedigree Pacote 1kg ",
+        "quantidadedeEstoque":19,
+        "undVenda":"1kg",
+        "valor":"R$20,50"
+    },
+    "(4, 25)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/182865-163-163?v=637734427207800000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos Peixe & Frutos do Mar Purina Friskies 1kg ",
+        "quantidadedeEstoque":10,
+        "undVenda":"1kg",
+        "valor":"R$25,50"
+    },
+    "(4, 26)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/187972-163-163?v=637819989478100000&width=163&height=163&aspect=true",
+        "nome":"Desinfetante Lysoform Pets Original Spray 500ml ",
+        "quantidadedeEstoque":1,
+        "undVenda":"500ml",
+        "valor":"R$14,50"
+    },
+    "(4, 27)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/182887-163-163?v=637734427392970000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos Frango e Vegetais Balance Premium Especial Pouch 3kg ",
+        "quantidadedeEstoque":38,
+        "undVenda":"3kg",
+        "valor":"R$53,99"
+    },
+    "(4, 28)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/178430-163-163?v=637668975365700000&width=163&height=163&aspect=true",
+        "nome":"Alimento para Gatos Adultos Cordeiro ao Molho Purina Friskies 85g ",
+        "quantidadedeEstoque":76,
+        "undVenda":"85g",
+        "valor":"R$3,19"
+    },
+    "(4, 29)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170985-163-163?v=637592736780830000&width=163&height=163&aspect=true",
+        "nome":"Petisco para Cães Adultos Carne Bistequitos Petitos Sachê 50g ",
+        "quantidadedeEstoque":48,
+        "undVenda":"50g",
+        "valor":"R$2,79"
+    },
+    "(4, 30)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/164547-163-163?v=637517759859630000&width=163&height=163&aspect=true",
+        "nome":"Biscoito com Recheio de Chocolate Treloso Vitarella Pacote 390g ",
+        "quantidadedeEstoque":46,
+        "undVenda":"390g",
+        "valor":"R$3,59"
+    },
+    "(4, 31)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/175454-163-163?v=637647217669200000&width=163&height=163&aspect=true",
+        "nome":"Maionese Quero Sachê 200g ",
+        "quantidadedeEstoque":56,
+        "undVenda":"200g",
+        "valor":"R$2,19"
+    },
+    "(4, 32)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/170633-163-163?v=637571364924600000&width=163&height=163&aspect=true",
+        "nome":"Azeitona Verde Fatiada em Conserva Confiare Pouch 80g ",
+        "quantidadedeEstoque":52,
+        "undVenda":"80g",
+        "valor":"R$2,89"
+    },
+    "(4, 33)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/156103-163-163?v=637460620747900000&width=163&height=163&aspect=true",
+        "nome":"Pão de Forma Plusvita Artesano Pacote 500g ",
+        "quantidadedeEstoque":84,
+        "undVenda":"500g",
+        "valor":"R$13,50"
+    },
+    "(4, 34)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/188384-163-163?v=637837567180030000&width=163&height=163&aspect=true",
+        "nome":"Açúcar Demerara Bella Pacote 900g ",
+        "quantidadedeEstoque":73,
+        "undVenda":"900g",
+        "valor":"R$4,99"
+    },
+    "(4, 35)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/185499-163-163?v=637793193338000000&width=163&height=163&aspect=true",
+        "nome":"Salgadinho De Milho DORITOS® Queijo Nacho Pacote 84g ",
+        "quantidadedeEstoque":80,
+        "undVenda":"84g",
+        "valor":"R$7,29"
+    },
+    "(4, 36)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/187818-163-163?v=637811539870100000&width=163&height=163&aspect=true",
+        "nome":"Azeite de Oliva Extra Virgem Andorinha Garrafa 500ml ",
+        "quantidadedeEstoque":61,
+        "undVenda":"500ml",
+        "valor":"R$19,12"
+    },
+    "(4, 37)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/178329-163-163?v=637668975089400000&width=163&height=163&aspect=true",
+        "nome":"Aveia em Flocos Finos Nestlé Pacote 170g ",
+        "quantidadedeEstoque":100,
+        "undVenda":"170g",
+        "valor":"R$4,49"
+    },
+    "(4, 38)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/185625-163-163?v=637793193610970000&width=163&height=163&aspect=true",
+        "nome":"Salgadinho De Milho Lua Queijo Elma Chips Cheetos Pacote 40g ",
+        "quantidadedeEstoque":65,
+        "undVenda":"40g",
+        "valor":"R$2,59"
+    },
+    "(4, 39)":{
+        "imgUrl":"https://bompreco.vtexassets.com/arquivos/ids/176202-163-163?v=637654042929730000&width=163&height=163&aspect=true",
+        "nome":"Atum Ralado Coqueiro Lata 170g ",
+        "quantidadedeEstoque":61,
+        "undVenda":"170g",
+        "valor":"R$6,89"
+    }
+}
