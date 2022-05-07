@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="admin-nav-container">
       <ul className="admin-nav-items-container">
         <li>
-          <NavLink to="/admin/products" className="admin-nav-item">
+          <NavLink to="/admin/produtos" className="admin-nav-item">
             <p>Produtos</p>
           </NavLink>
         </li>
