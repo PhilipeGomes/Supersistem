@@ -72,9 +72,12 @@ const Home = () => {
      <h5>Número de itens: {/*aquiRetornaNumeroDeItens*/}</h5>
      <h5>Valor: R$ 99,99 {/*aquiRetornaOpreco*/}</h5>
      <br></br>
-     <button>Ir para pagamento</button> {/*Evento seguinte a ser decidido, se mais uma página ou se pagamento em página externa*/}
-     <br></br>
-     <button>Cancelar</button> {/*Evento de limpar o carrinho*/}
+     <div className='confirmacao'>
+      <button>Ir para pagamento</button> {/*Evento seguinte a ser decidido, se mais uma página ou se pagamento em página externa*/}
+      <br></br>
+      <button>Cancelar</button> {/*Evento de limpar o carrinho*/}
+     </div>
+     
     </div>
 </div>
 
