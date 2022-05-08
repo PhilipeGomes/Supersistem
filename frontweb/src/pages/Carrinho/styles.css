@@ -7,29 +7,35 @@
   background-color: white;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   text-align: center;
-  border-radius: 20px;
 }
 
 
 .item {
-  display: inline-table;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 3%;
   /**width:100%;**/
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   }
 
 .item:hover{
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
 }
 .nome-item{
+  display: flex;
   font-weight: 600;
+
+}
+.img-produto{
+  display: flex;
+  
+}
+.botao{
+  display: block;
 }
 
-
-
-.item button{
+ button{
     max-width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -45,34 +51,14 @@
     
   }
   
-.item  button:hover{
+button:hover{
     background-color: #feda8a;
   
     
   }
 
-
-.confirmacao button{
-    max-width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-right: 15px;
-    color: #fff;
-    background-color: #4169E1;
-    margin-left: 0px;
-    margin-right: 15px;
-    border: 0;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
-    
-  }
-  
-.confirmacao  button:hover{
-    background-color: #feda8a; 
-  }
-
 .itembtn{
+  display: flex;
     padding: 5%;
     border-color: black;
     border-style: solid;
@@ -81,11 +67,14 @@
 
   .qtd-item{
     padding: 5%;
-    display: inline-block;
+    display: flex;
     border-color: gray;
     border-width: 1%;
     border-style: solid;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 10%;
+    margin-right: 8%;
   }
-  
+  .preco-item{
+    display: flex;
+    margin-left: 5%;
+  }
