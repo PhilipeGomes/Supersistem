@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -23,6 +25,23 @@ public class ManipuladorExcecaoRecursos {
 		err.setErro("Recurso nao encontrado");
 		err.setMessagem(e.getMessage());
 		err.setCaminho(request.getRequestURI());
+		return ResponseEntity.status(status).body(err);
+	}
+	
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseEntity<ErroValidacao> validacao(MethodArgumentNotValidException e, HttpServletRequest request) {
+		HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
+		ErroValidacao err = new ErroValidacao();
+		err.setTempo(Instant.now());
+		err.setStatus(status.value());
+		err.setErro("Excecao validacao");
+		err.setMessagem(e.getMessage());
+		err.setCaminho(request.getRequestURI());
+		
+		for (FieldError f : e.getBindingResult().getFieldErrors()) {
+			err.addErro(f.getField(), f.getDefaultMessage());
+		}
+		
 		return ResponseEntity.status(status).body(err);
 	}	
 

@@ -1,9 +1,14 @@
 package com.ufrpe.superSystem.controle;
 
+import java.net.URI;
+
+import javax.validation.Valid;
+
 //import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 //import org.springframework.data.web.PageableDefault;
 //import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ufrpe.superSystem.dto.ProdutoDTO;
 import com.ufrpe.superSystem.servico.ProdutoServico;
@@ -38,23 +44,29 @@ public class ProdutoControle {
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ProdutoDTO buscarPeloId(@PathVariable Long id) {
-		return produtoServico.buscarPeloId(id);
+	public  ResponseEntity<ProdutoDTO> buscarPeloId(@PathVariable Long id) {
+		ProdutoDTO dto = produtoServico.buscarPeloId(id);
+		return ResponseEntity.ok().body(dto);
 	}
 	
 	@PostMapping
-	public ProdutoDTO salvarProduto(@RequestBody ProdutoDTO dto) {
-		return produtoServico.salvar(dto);
+	public ResponseEntity<ProdutoDTO> salvarProduto(@Valid @RequestBody ProdutoDTO dto) {
+		dto = produtoServico.salvar(dto);
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+				.buildAndExpand(dto.getId()).toUri();
+		return ResponseEntity.created(uri).body(dto);
 	}
 	
 	@PutMapping("/{id}/editar")
-	public ProdutoDTO editarProduto(@PathVariable Long id, @RequestBody ProdutoDTO dto) {
-		return produtoServico.editar(id, dto);
+	public ResponseEntity<ProdutoDTO> editarProduto(@PathVariable Long id, @Valid  @RequestBody ProdutoDTO dto) {
+		dto = produtoServico.editar(id, dto);
+		return ResponseEntity.ok().body(dto);
 	}
 
 	@RequestMapping("/{id}/deletar")
-	public void deletarProduto(@PathVariable Long id) {
+	public ResponseEntity<Void> deletarProduto(@PathVariable Long id) {
 		produtoServico.deletar(id);
+		return ResponseEntity.noContent().build();
 	}
 
 	

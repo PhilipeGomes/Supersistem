@@ -3,7 +3,10 @@ package com.ufrpe.superSystem.dto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 
 import com.ufrpe.superSystem.modelos.Categoria;
 import com.ufrpe.superSystem.modelos.Produto;
@@ -11,12 +14,22 @@ import com.ufrpe.superSystem.modelos.Produto;
 public class ProdutoDTO {
 
 	private Long id;
+	@Size(min = 3, max = 100, message = "Minimo 3 e maximo 100 caracteres")
+	@NotBlank(message = "Campo obrigatório")
 	private String nome;
+	
+	@Positive(message = "Preço tem que ser positivo")
 	private Double valor;
+	
+	@Positive(message = "Quantidade em estoque tem que ser positivo")
 	private Double qtdEstoque;
 	private String marca;
 	private String imgUrl;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String descricao;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String undVenda;
 
 	private List<CategoriaDTO> categorias = new ArrayList<>();

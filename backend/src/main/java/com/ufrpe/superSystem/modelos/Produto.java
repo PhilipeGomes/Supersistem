@@ -16,6 +16,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -31,14 +32,18 @@ public class Produto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String nome;
+    @NotBlank
     private Double valor;
+    @NotBlank
     private Double qtdEstoque;
     private String marca;
     private String imgUrl;
     
     @Column(columnDefinition = "TEXT")
     private String descricao;
+    @NotBlank
     private String undVenda;
     
     @ManyToMany
