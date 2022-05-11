@@ -25,12 +25,12 @@ public class ClienteServico {
 	    return resultado.map(res -> new ClienteDTO(res));
 	}
 
-	@Transactional(readOnly = true)
-	public ClienteDTO buscarPeloId(Long id) {
-		Cliente resultado = clienteRepositorio.findById(id).get();
-		ClienteDTO dto = new ClienteDTO(resultado);
-		return dto;
-	}
+//	@Transactional(readOnly = true)
+//	public ClienteDTO buscarPeloId(Long id) {
+//		Cliente resultado = clienteRepositorio.findById(id).get();
+//		ClienteDTO dto = new ClienteDTO(resultado);
+//		return dto;
+//	}
 
 	@Transactional
 	public void deletar(Long id) {
@@ -40,9 +40,9 @@ public class ClienteServico {
 	@Transactional
 	public ClienteDTO salvar(ClienteDTO clienteDTO) {
 		Cliente cliente = new Cliente();
-		cliente.setCpf(clienteDTO.getCpf());
-		cliente.setNome(clienteDTO.getNome());
-		cliente.setEmail(clienteDTO.getEmail());
+//		cliente.setCpf(clienteDTO.getCpf());
+//		cliente.setNome(clienteDTO.getNome());
+//		cliente.setEmail(clienteDTO.getEmail());
 		cliente.setTelefone(clienteDTO.getTelefone());
 
 		clienteRepositorio.save(cliente);
@@ -53,9 +53,9 @@ public class ClienteServico {
 	public ClienteDTO editar(Long id, ClienteDTO clienteDTO) {
 		
 		Cliente cliente = clienteRepositorio.findById(id).get();
-		cliente.setCpf(clienteDTO.getCpf());
-		cliente.setNome(clienteDTO.getNome());
-		cliente.setEmail(clienteDTO.getEmail());
+//		cliente.setCpf(clienteDTO.getCpf());
+//		cliente.setNome(clienteDTO.getNome());
+//		cliente.setEmail(clienteDTO.getEmail());
 		cliente.setTelefone(clienteDTO.getTelefone());
 		
 		clienteRepositorio.save(cliente);

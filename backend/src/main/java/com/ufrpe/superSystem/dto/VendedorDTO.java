@@ -9,34 +9,37 @@ import com.ufrpe.superSystem.modelos.Vendedor;
 
 public class VendedorDTO {
 	
-	private Long id;
 	private String nome;
+	private Long cpf;
 	
-
 	public VendedorDTO(){
 		
 	}
 
 	
 	public VendedorDTO(Vendedor vendedor) {
-		this.id = vendedor.getId();
-		this.nome = vendedor.getNome();
+//		this.nome = vendedor.getNome();
+//		this.cpf  = vendedor.getCpf();
 	}
 	
-	public VendedorDTO(Long id, String nome) {
-		this.id = id;
+	public VendedorDTO(String nome, Long cpf) {
 		this.nome = nome;
+		this.cpf = cpf;
+	}
+	
+	
+
+    public Long getCpf() {
+		return cpf;
 	}
 
-    public Long getId() {
-        return this.id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setCpf(Long cpf) {
+		this.cpf = cpf;
+	}
 
-    public String getNome() {
+
+	public String getNome() {
         return this.nome;
     }
 

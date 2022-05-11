@@ -25,10 +25,10 @@ public class Pedido implements Serializable{
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant data_pedido;
 	@ManyToOne
-  	@JoinColumn(name = "cliente_id")
+	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
 	@ManyToOne
-    @JoinColumn(name = "vendedor_id")
+	@JoinColumn(name = "vendedor_id")
 	private Vendedor vendedor;
 	private StatusPedido status;
 	

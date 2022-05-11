@@ -20,6 +20,7 @@ public class ConfigSeguranca extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private Environment env;
 
+	//uma classe com configuração provisória para liberar todos os endpoints
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {

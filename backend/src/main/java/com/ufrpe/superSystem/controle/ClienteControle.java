@@ -27,15 +27,15 @@ public class ClienteControle {
 	
 	@GetMapping
 	public ResponseEntity<Page<ClienteDTO>> buscarTodos(
-			@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
+			@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC) Pageable pageable) {
 		return ResponseEntity.status(HttpStatus.OK).body(clienteServico.buscarTodos(pageable));
 	}
 	
-	@GetMapping(value = "/{id}")
-	public ClienteDTO buscarPeloId(@PathVariable Long id) {
-		return clienteServico.buscarPeloId(id);
-	}
-	
+//	@GetMapping(value = "/{id}")
+//	public ClienteDTO buscarPeloId(@PathVariable Long id) {
+//		return clienteServico.buscarPeloId(id);
+//	}
+//	
 	@PostMapping
 	public ClienteDTO salvarCliente(@RequestBody ClienteDTO dto) {
 		return clienteServico.salvar(dto);

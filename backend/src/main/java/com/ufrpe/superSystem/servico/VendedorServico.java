@@ -24,12 +24,12 @@ public class VendedorServico {
 	    return resultado.map(res -> new VendedorDTO(res));
 	}
 	
-	@Transactional(readOnly=true)
-	public VendedorDTO buscarPeloId(Long id){
-		Vendedor resultado = vendedorRepositorio.findById(id).get();
-		VendedorDTO dto = new VendedorDTO(resultado);
-		return dto;
-	}
+//	@Transactional(readOnly=true)
+//	public VendedorDTO buscarPeloId(Long id){
+//		Vendedor resultado = vendedorRepositorio.findById(id).get();
+//		VendedorDTO dto = new VendedorDTO(resultado);
+//		return dto;
+//	}
 	
 	public void deletar(Long id) {
 		vendedorRepositorio.deleteById(id);
@@ -37,7 +37,7 @@ public class VendedorServico {
 	
 	public VendedorDTO salvar(VendedorDTO vendedorDTO) {
 		Vendedor vendedor = new Vendedor();
-		vendedor.setNome(vendedorDTO.getNome());
+//		vendedor.setNome(vendedorDTO.getNome());
 
 		
 		vendedorRepositorio.save(vendedor);

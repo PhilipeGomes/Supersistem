@@ -1,5 +1,7 @@
 package com.ufrpe.superSystem.dto;
 
+import java.util.Objects;
+
 import com.ufrpe.superSystem.modelos.Cliente;
 
 //camada responsavel por fazer a comunicação entre a camada de serviço e a camada de controle, sem nenhuma relação com transação, ou banco de dados
@@ -9,9 +11,8 @@ import com.ufrpe.superSystem.modelos.Cliente;
 
 public class ClienteDTO {
 
-	private Long id;
 	private String nome;
-	private String cpf;
+	private Long cpf;
 	private String telefone;
 	private String email;
 
@@ -20,27 +21,17 @@ public class ClienteDTO {
 	}
 
 	public ClienteDTO(Cliente cliente) {
-		this.id = cliente.getId();
-		this.nome = cliente.getNome();
-		this.cpf = cliente.getCpf();
+//		this.nome = cliente.getNome();
+//		this.cpf = cliente.getCpf();
 		this.telefone = cliente.getTelefone();
-		this.email = cliente.getEmail();
+//		this.email = cliente.getEmail();
 	}
 
-	public ClienteDTO(Long id, String nome, String cpf, String telefone, String email) {
-		this.id = id;
+	public ClienteDTO(String nome, Long cpf, String telefone, String email) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.email = email;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getNome() {
@@ -51,11 +42,11 @@ public class ClienteDTO {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
+	public Long getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(String cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 
@@ -74,4 +65,22 @@ public class ClienteDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cpf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClienteDTO other = (ClienteDTO) obj;
+		return Objects.equals(cpf, other.cpf);
+	}
+	
 }
