@@ -70,7 +70,7 @@ button:hover{
     display: flex;
     border-color: gray;
     border-width: 1%;
-    border-style: solid;
+    border-style: none;
     margin-left: 10%;
     margin-right: 8%;
   }

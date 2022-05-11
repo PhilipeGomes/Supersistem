@@ -7,6 +7,7 @@ import Cadastro from 'pages/Cadastro';
 import Login from 'pages/Login';
 import ProductDetails from 'pages/ProductDetails';
 import Carrinho from 'pages/Carrinho';
+import Erro from 'pages/Erro';
 import 'bootstrap';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -36,6 +37,9 @@ const Routes = () => (
       <Redirect from="/admin" to="/admin/produtos" exact />
       <Route path="/admin">
         <Admin />
+      </Route>
+      <Route path="*" >
+      <Erro />
       </Route>
     </Switch>
   </BrowserRouter>
