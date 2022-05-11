@@ -15,10 +15,10 @@ public class ProdutoDTO {
 
 	private Long id;
 	@Size(min = 3, max = 100, message = "Minimo 3 e maximo 100 caracteres")
-	@NotBlank(message = "Campo obrigatório")
+	@NotBlank(message = "Campo obrigatorio")
 	private String nome;
 	
-	@Positive(message = "Preço tem que ser positivo")
+	@Positive(message = "Preco tem que ser positivo")
 	private Double valor;
 	
 	@Positive(message = "Quantidade em estoque tem que ser positivo")
@@ -26,10 +26,10 @@ public class ProdutoDTO {
 	private String marca;
 	private String imgUrl;
 	
-	@NotBlank(message = "Campo obrigatório")
+	@NotBlank(message = "Campo obrigatorio")
 	private String descricao;
 	
-	@NotBlank(message = "Campo obrigatório")
+	@NotBlank(message = "Campo obrigatorio")
 	private String undVenda;
 
 	private List<CategoriaDTO> categorias = new ArrayList<>();
@@ -46,7 +46,7 @@ public class ProdutoDTO {
 		this.marca = produto.getMarca();
 		this.imgUrl = produto.getImgUrl();
 		this.descricao = produto.getDescricao();
-		this.undVenda = produto.getUndVenda();
+		this.undVenda = produto.getUndVenda();	
 
 		//categorias = produto.getCategorias().stream().map(x -> new CategoriaDTO(x)).collect(Collectors.toList());
 	}

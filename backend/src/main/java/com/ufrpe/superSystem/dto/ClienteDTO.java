@@ -1,5 +1,8 @@
 package com.ufrpe.superSystem.dto;
 
+import javax.persistence.Column;
+import javax.validation.constraints.NotBlank;
+
 import com.ufrpe.superSystem.modelos.Cliente;
 
 //camada responsavel por fazer a comunicação entre a camada de serviço e a camada de controle, sem nenhuma relação com transação, ou banco de dados
@@ -10,9 +13,17 @@ import com.ufrpe.superSystem.modelos.Cliente;
 public class ClienteDTO {
 
 	private Long id;
+	
+	@NotBlank(message = "Campo obrigatorio")
 	private String nome;
+	
+	@Column(unique = true)
+	@NotBlank(message = "Campo obrigatorio")
 	private String cpf;
+	
 	private String telefone;
+	
+	@NotBlank(message = "Campo obrigatorio" )
 	private String email;
 
 	public ClienteDTO() {
