@@ -30,7 +30,6 @@ module.exports = function (){
                     variables.produtos.invalids_posts_requests_ids_to_delete.push(res.body.id)
                 }
                 expect(res.statusCode).to.be.equal(400)
-                done()
             })
     })
     it("POST /produtos - 400 bad request - Invalid 'Produto' - invalid paramiter(valor)", function (done){

@@ -11,14 +11,12 @@ const host = constants.global_variables.super_api
 
 module.exports = function (){
     before("Creating 'protudo' to delete", async function(){
-        chai.request(host)
+        let res = await chai.request(host)
             .post('/produtos')
             .send(config.valid_produto_request_body)
-            .end(function(err, res){
-                expect(err).to.be.null;
-                expect(res.statusCode).to.be.equal(200)
-                variables.produtos.created_id_to_delete = res.body.id
-            })
+            expect(res.statusCode).to.be.equal(200)
+            variables.produtos.created_id_to_delete = res.body.id
+            
     })
     it("DELETE /produtos/id - 200 success - Delete created product", function (done){
         chai.request(host)

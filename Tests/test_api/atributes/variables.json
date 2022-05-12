@@ -2,11 +2,21 @@
      "produtos": {
           "valid_id": 1,
           "inexistent_id": 0,
-          "deleted_produtc": 9,
+          "deleted_produtc": "",
+          "string_id": "Sting",
+          "created_id": "",
+          "created_id_to_delete":"",
+          "created_id_to_update":"",
+          "invalids_posts_requests_ids_to_delete": []
+     },
+     "clientes":{
+          "valid_id": 1,
+          "inexistent_id": 0,
+          "deleted_client": "",
           "string_id": "Sting",
           "created_id": "",
           "created_id_to_delete":"",
           "created_id_to_update":"",
           "invalids_posts_requests_ids_to_delete": []
      }
-}
+}    

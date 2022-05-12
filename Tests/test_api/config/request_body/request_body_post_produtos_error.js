@@ -33,5 +33,23 @@ module.exports = {
         "imgUrl": "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg",
         "descricao": "Produto criado para testes",
         "undVenda": "1Und"
+    },
+    "invalid_produto_request_body_blank_space": {
+        "nome": "Produto Automation Test",
+        "valor": 10,
+        "qtdEstoque": 10,
+        "marca": " ",
+        "imgUrl": "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg",
+        "descricao": "Produto criado para testes",
+        "undVenda": "1Und"
+    },
+    "invalid_produto_request_body_empty_paramiter": {
+        "nome": "Produto Automation Test",
+        "valor": 10,
+        "qtdEstoque": 10,
+        "marca": "",
+        "imgUrl": "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg",
+        "descricao": "Produto criado para testes",
+        "undVenda": "1Und"
     }
 }

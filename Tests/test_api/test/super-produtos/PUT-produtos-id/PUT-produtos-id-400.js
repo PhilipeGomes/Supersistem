@@ -11,22 +11,16 @@ const host = constants.global_variables.super_api
 
 module.exports = function (){
     beforeEach("Creating 'protudo' to update", async function(){
-        chai.request(host)
+        let res = await chai.request(host)
             .post('/produtos')
             .send(config.valid_produto_request_body)
-            .end(function(err, res){
-                expect(err).to.be.null;
-                expect(res.statusCode).to.be.equal(200)
-                variables.produtos.created_id_to_update = res.body.id
-            })
+            expect(res.statusCode).to.be.equal(200)
+            variables.produtos.created_id_to_update = res.body.id
     })
     afterEach("Deleting created 'produtos'", async function (){
-        chai.request(host)
+        let res = await chai.request(host)
             .delete('/produtos/'+ variables.produtos.created_id_to_update + '/deletar')
-            .end(function(err, res){
-                expect(err).to.be.null;
-                expect(res.statusCode).to.be.equal(200)
-            })
+            expect(res.statusCode).to.be.equal(200)
     })
     it("PUT /produtos/id - 400 success - Invalid edit inseted product(valor)", function (done){
         chai.request(host)

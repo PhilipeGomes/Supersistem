@@ -1,0 +1,44 @@
+1) Supersystem Tests
+       post-produto-400
+         POST /produtos - 400 bad request - Invalid 'Produto' - missig paramiter(valor):
+
+      Uncaught AssertionError: expected 500 to equal 400
+      + expected - actual
+
+      -500
+      +400
+//requisição com parametro 'valor' faltando. retorna erro no sistema(500).
+-----------------------------------------------------------
+2) Supersystem Tests
+       post-produto-400
+         POST /produtos - 400 bad request - Invalid 'Produto' - Null paramiter(valor):
+
+      Uncaught AssertionError: expected 200 to equal 400
+      + expected - actual
+
+      -200
+      +400
+//requisição passando null como valor do parametro 'valor. retorna sucesso(200)
+---------------------------------------------------------
+ 3) Supersystem Tests
+       post-produto-400
+         POST /produtos - 400 bad request - Invalid 'Produto' request - Wrong paramiter name (name):
+
+      Uncaught AssertionError: expected 200 to equal 400
+      + expected - actual
+
+      -200
+      +400
+//requisição com nome de parametro 'nome' escrito errado. retorna sucesso(200).
+-------------------------------------------------------
+6) Supersystem Tests
+       get-produto-id-404
+         GET /produtos/id - 404 Not found - Inexistent id:
+
+      Uncaught AssertionError: expected 500 to equal 404
+      + expected - actual
+
+      -500
+      +404
+//requisição tentando deletar produtos que já foram deletados. retorna error no sistema(500)
+--------------------------------------------------------

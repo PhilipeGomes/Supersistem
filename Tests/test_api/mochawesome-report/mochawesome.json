@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 7,
-    "tests": 10,
-    "passes": 8,
+    "suites": 13,
+    "tests": 20,
+    "passes": 15,
     "pending": 0,
-    "failures": 2,
-    "start": "2022-04-13T23:08:23.589Z",
-    "end": "2022-04-13T23:08:23.758Z",
-    "duration": 169,
-    "testsRegistered": 10,
-    "passPercent": 80,
+    "failures": 5,
+    "start": "2022-05-12T21:34:15.408Z",
+    "end": "2022-05-12T21:34:15.666Z",
+    "duration": 258,
+    "testsRegistered": 20,
+    "passPercent": 75,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "156858b5-aef2-4ac3-845c-0ce49b922385",
+      "uuid": "d3445bbf-e437-47ef-85be-ad7ed11cff84",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ffbe7269-4e08-4a4d-90e7-c29294c3c817",
+          "uuid": "d664191c-fa11-4ee0-b535-b1f65ff8aabe",
           "title": "Supersystem Tests",
           "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
           "file": "\\run\\full_tests.js",
@@ -36,57 +36,37 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "80cc734e-977d-4b0f-af18-0ba109d6851a",
+              "uuid": "bb6b73ce-2d74-4b5b-b7bd-c8467666d84b",
               "title": "post-produto-200",
               "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
               "file": "\\run\\full_tests.js",
               "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
+              "afterHooks": [
                 {
-                  "title": "POST /produtos - 200 success - Valid 'Produto'",
-                  "fullTitle": "Supersystem Tests post-produto-200 POST /produtos - 200 success - Valid 'Produto'",
+                  "title": "\"after each\" hook: Getting inserted 'produto' in \"post-produto-200\"",
+                  "fullTitle": "Supersystem Tests post-produto-200 \"after each\" hook: Getting inserted 'produto' in \"post-produto-200\"",
                   "timedOut": false,
-                  "duration": 47,
-                  "state": "passed",
-                  "speed": "medium",
-                  "pass": true,
+                  "duration": 13,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "f5e56014-5c30-4d03-8383-36da6bdf28d9",
-                  "parentUUID": "80cc734e-977d-4b0f-af18-0ba109d6851a",
-                  "isHook": false,
+                  "uuid": "695630ff-b523-4b87-84cf-73bc65a11745",
+                  "parentUUID": "bb6b73ce-2d74-4b5b-b7bd-c8467666d84b",
+                  "isHook": true,
                   "skipped": false
                 }
               ],
-              "suites": [],
-              "passes": [
-                "f5e56014-5c30-4d03-8383-36da6bdf28d9"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 47,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 0
-            },
-            {
-              "uuid": "896d6c3f-32ea-4bba-8d98-bbb93e77a9c9",
-              "title": "get-produto-200",
-              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
-              "file": "\\run\\full_tests.js",
-              "beforeHooks": [],
-              "afterHooks": [],
               "tests": [
                 {
-                  "title": "GET /produtos - 200 success - Content existence validation (List)",
-                  "fullTitle": "Supersystem Tests get-produto-200 GET /produtos - 200 success - Content existence validation (List)",
+                  "title": "POST /produtos - 200 success - Valid 'Produto'",
+                  "fullTitle": "Supersystem Tests post-produto-200 POST /produtos - 200 success - Valid 'Produto'",
                   "timedOut": false,
-                  "duration": 10,
+                  "duration": 34,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -95,15 +75,297 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "bc3b57da-9ed2-4c68-9b37-a32be5fbec93",
-                  "parentUUID": "896d6c3f-32ea-4bba-8d98-bbb93e77a9c9",
+                  "uuid": "71451185-837c-4751-99b6-20cc30933da9",
+                  "parentUUID": "bb6b73ce-2d74-4b5b-b7bd-c8467666d84b",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "bc3b57da-9ed2-4c68-9b37-a32be5fbec93"
+                "71451185-837c-4751-99b6-20cc30933da9"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 34,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "5221b4d5-f109-4084-97fc-70f666fc5641",
+              "title": "post-produto-400",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [],
+              "afterHooks": [
+                {
+                  "title": "\"after all\" hook: deleting invalid 'produtos' in \"post-produto-400\"",
+                  "fullTitle": "Supersystem Tests post-produto-400 \"after all\" hook: deleting invalid 'produtos' in \"post-produto-400\"",
+                  "timedOut": false,
+                  "duration": 3,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "a2060dbe-0f4e-4b50-b54b-7bd45be55a2f",
+                  "parentUUID": "5221b4d5-f109-4084-97fc-70f666fc5641",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "tests": [
+                {
+                  "title": "POST /produtos - 400 bad request - Invalid 'Produto' - missig paramiter(valor)",
+                  "fullTitle": "Supersystem Tests post-produto-400 POST /produtos - 400 bad request - Invalid 'Produto' - missig paramiter(valor)",
+                  "timedOut": false,
+                  "duration": 10,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {
+                    "message": "AssertionError: expected 500 to equal 400",
+                    "estack": "AssertionError: expected 500 to equal 400\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\POST-produtos\\POST-produtos-400.js:32:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+                    "diff": "- 500\n+ 400\n"
+                  },
+                  "uuid": "991b99fb-3cb8-4a8c-ac8a-fb88a04c089a",
+                  "parentUUID": "5221b4d5-f109-4084-97fc-70f666fc5641",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "POST /produtos - 400 bad request - Invalid 'Produto' - invalid paramiter(valor)",
+                  "fullTitle": "Supersystem Tests post-produto-400 POST /produtos - 400 bad request - Invalid 'Produto' - invalid paramiter(valor)",
+                  "timedOut": false,
+                  "duration": 3,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "63452642-0a92-4199-b76f-ddc663558173",
+                  "parentUUID": "5221b4d5-f109-4084-97fc-70f666fc5641",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "POST /produtos - 400 bad request - Invalid 'Produto' - Null paramiter(valor)",
+                  "fullTitle": "Supersystem Tests post-produto-400 POST /produtos - 400 bad request - Invalid 'Produto' - Null paramiter(valor)",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {
+                    "message": "AssertionError: expected 200 to equal 400",
+                    "estack": "AssertionError: expected 200 to equal 400\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\POST-produtos\\POST-produtos-400.js:58:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+                    "diff": "- 200\n+ 400\n"
+                  },
+                  "uuid": "f83aa703-14e4-4ac8-858a-e80cd8b26112",
+                  "parentUUID": "5221b4d5-f109-4084-97fc-70f666fc5641",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "POST /produtos - 400 bad request - Invalid 'Produto' request - Wrong paramiter name (name)",
+                  "fullTitle": "Supersystem Tests post-produto-400 POST /produtos - 400 bad request - Invalid 'Produto' request - Wrong paramiter name (name)",
+                  "timedOut": false,
+                  "duration": 7,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {
+                    "message": "AssertionError: expected 200 to equal 400",
+                    "estack": "AssertionError: expected 200 to equal 400\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\POST-produtos\\POST-produtos-400.js:71:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+                    "diff": "- 200\n+ 400\n"
+                  },
+                  "uuid": "9c4b8563-f697-4f75-93ae-e2442321fb3f",
+                  "parentUUID": "5221b4d5-f109-4084-97fc-70f666fc5641",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "63452642-0a92-4199-b76f-ddc663558173"
+              ],
+              "failures": [
+                "991b99fb-3cb8-4a8c-ac8a-fb88a04c089a",
+                "f83aa703-14e4-4ac8-858a-e80cd8b26112",
+                "9c4b8563-f697-4f75-93ae-e2442321fb3f"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 25,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "282aef6a-6b1e-4395-b14f-02d6cf88b11b",
+              "title": "post-cliente-200",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [],
+              "afterHooks": [
+                {
+                  "title": "\"after each\" hook: Getting inserted 'cliente' in \"post-cliente-200\"",
+                  "fullTitle": "Supersystem Tests post-cliente-200 \"after each\" hook: Getting inserted 'cliente' in \"post-cliente-200\"",
+                  "timedOut": false,
+                  "duration": 9,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "eb10d5f0-44ab-4088-be4f-8a00f590744b",
+                  "parentUUID": "282aef6a-6b1e-4395-b14f-02d6cf88b11b",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "tests": [
+                {
+                  "title": "POST /clientes - 200 success - Valid 'Cliente'",
+                  "fullTitle": "Supersystem Tests post-cliente-200 POST /clientes - 200 success - Valid 'Cliente'",
+                  "timedOut": false,
+                  "duration": 9,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "997d2ef7-4a9c-46ec-9825-db3e0c0489c6",
+                  "parentUUID": "282aef6a-6b1e-4395-b14f-02d6cf88b11b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "997d2ef7-4a9c-46ec-9825-db3e0c0489c6"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 9,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "47a6e46f-902b-4d1a-a87d-1315a7cbb7a5",
+              "title": "put-produto-id-200",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before each\" hook: Creating 'protudo' to update in \"put-produto-id-200\"",
+                  "fullTitle": "Supersystem Tests put-produto-id-200 \"before each\" hook: Creating 'protudo' to update in \"put-produto-id-200\"",
+                  "timedOut": false,
+                  "duration": 6,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "6e96a862-2d9d-4de3-9b4e-2f7bd0f77b90",
+                  "parentUUID": "47a6e46f-902b-4d1a-a87d-1315a7cbb7a5",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [
+                {
+                  "title": "\"after each\" hook: Deleting created 'produtos' in \"put-produto-id-200\"",
+                  "fullTitle": "Supersystem Tests put-produto-id-200 \"after each\" hook: Deleting created 'produtos' in \"put-produto-id-200\"",
+                  "timedOut": false,
+                  "duration": 4,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "9cf6d5cd-aa84-49d0-b35a-8afd47a4295a",
+                  "parentUUID": "47a6e46f-902b-4d1a-a87d-1315a7cbb7a5",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "tests": [
+                {
+                  "title": "PUT /produtos/id - 200 success - Edit inseted product",
+                  "fullTitle": "Supersystem Tests put-produto-id-200 PUT /produtos/id - 200 success - Edit inseted product",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "1b9aca4e-b51c-404b-89a9-857c75c48d69",
+                  "parentUUID": "47a6e46f-902b-4d1a-a87d-1315a7cbb7a5",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "PUT /produtos/id - 200 success - Edit inseted product - Not sending paramiter(nome)",
+                  "fullTitle": "Supersystem Tests put-produto-id-200 PUT /produtos/id - 200 success - Edit inseted product - Not sending paramiter(nome)",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "c18ed4e3-4ce7-4932-9652-caa6afe5a2cf",
+                  "parentUUID": "47a6e46f-902b-4d1a-a87d-1315a7cbb7a5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1b9aca4e-b51c-404b-89a9-857c75c48d69",
+                "c18ed4e3-4ce7-4932-9652-caa6afe5a2cf"
               ],
               "failures": [],
               "pending": [],
@@ -114,7 +376,162 @@
               "_timeout": 0
             },
             {
-              "uuid": "ed7e72c5-a108-4ea2-9494-682d1dde9058",
+              "uuid": "d1f1d086-9b6a-482c-affc-5c8fdb9992df",
+              "title": "put-produto-id-400",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before each\" hook: Creating 'protudo' to update in \"put-produto-id-400\"",
+                  "fullTitle": "Supersystem Tests put-produto-id-400 \"before each\" hook: Creating 'protudo' to update in \"put-produto-id-400\"",
+                  "timedOut": false,
+                  "duration": 6,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "63a28092-9efb-4ef1-9b56-351419c72fc0",
+                  "parentUUID": "d1f1d086-9b6a-482c-affc-5c8fdb9992df",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [
+                {
+                  "title": "\"after each\" hook: Deleting created 'produtos' in \"put-produto-id-400\"",
+                  "fullTitle": "Supersystem Tests put-produto-id-400 \"after each\" hook: Deleting created 'produtos' in \"put-produto-id-400\"",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "9d270721-f428-4bc2-8fa5-bc006af9e6db",
+                  "parentUUID": "d1f1d086-9b6a-482c-affc-5c8fdb9992df",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "tests": [
+                {
+                  "title": "PUT /produtos/id - 400 success - Invalid edit inseted product(valor)",
+                  "fullTitle": "Supersystem Tests put-produto-id-400 PUT /produtos/id - 400 success - Invalid edit inseted product(valor)",
+                  "timedOut": false,
+                  "duration": 4,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "da0bb9ba-09ec-4bd3-86b0-e3434a0d3850",
+                  "parentUUID": "d1f1d086-9b6a-482c-affc-5c8fdb9992df",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "da0bb9ba-09ec-4bd3-86b0-e3434a0d3850"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "e09041eb-47aa-4c02-b811-3892e1aae78a",
+              "title": "get-produto-200",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "GET /produtos - 200 success - Content existence validation (List)",
+                  "fullTitle": "Supersystem Tests get-produto-200 GET /produtos - 200 success - Content existence validation (List)",
+                  "timedOut": false,
+                  "duration": 14,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "4184c53a-d6c8-40e2-ac88-f2813ebcf30f",
+                  "parentUUID": "e09041eb-47aa-4c02-b811-3892e1aae78a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4184c53a-d6c8-40e2-ac88-f2813ebcf30f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 14,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "aadbdf60-43ed-4625-9536-08f83ce6843e",
+              "title": "get-clientes-200",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "GET /clientes - 200 success - Content existence validation (List)",
+                  "fullTitle": "Supersystem Tests get-clientes-200 GET /clientes - 200 success - Content existence validation (List)",
+                  "timedOut": false,
+                  "duration": 6,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "6b8c3175-91b9-4718-8924-ed3d4971d961",
+                  "parentUUID": "aadbdf60-43ed-4625-9536-08f83ce6843e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6b8c3175-91b9-4718-8924-ed3d4971d961"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "f4aa7c31-85bd-4316-9548-9b9274d8cd0b",
               "title": "get-produto-id-200",
               "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
               "file": "\\run\\full_tests.js",
@@ -134,15 +551,15 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "f11f1084-c304-4dc5-bc18-0a243adc0281",
-                  "parentUUID": "ed7e72c5-a108-4ea2-9494-682d1dde9058",
+                  "uuid": "45658245-f507-48a4-a332-bb692d68a883",
+                  "parentUUID": "f4aa7c31-85bd-4316-9548-9b9274d8cd0b",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "f11f1084-c304-4dc5-bc18-0a243adc0281"
+                "45658245-f507-48a4-a332-bb692d68a883"
               ],
               "failures": [],
               "pending": [],
@@ -153,18 +570,37 @@
               "_timeout": 0
             },
             {
-              "uuid": "9a65ee74-6ca1-43e8-a9db-05c9e676a6ad",
+              "uuid": "aba17b19-7098-4a01-8576-91865c1e4088",
               "title": "get-produto-id-404",
               "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
               "file": "\\run\\full_tests.js",
               "beforeHooks": [],
-              "afterHooks": [],
+              "afterHooks": [
+                {
+                  "title": "\"after each\" hook: Creating 'protudo' to try delete twoice in \"get-produto-id-404\"",
+                  "fullTitle": "Supersystem Tests get-produto-id-404 \"after each\" hook: Creating 'protudo' to try delete twoice in \"get-produto-id-404\"",
+                  "timedOut": false,
+                  "duration": 9,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "111ce4d6-4505-45b4-aa5e-b5749d8fc0cf",
+                  "parentUUID": "aba17b19-7098-4a01-8576-91865c1e4088",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
               "tests": [
                 {
                   "title": "GET /produtos/id - 404 Not found - Inexistent id",
                   "fullTitle": "Supersystem Tests get-produto-id-404 GET /produtos/id - 404 Not found - Inexistent id",
                   "timedOut": false,
-                  "duration": 31,
+                  "duration": 5,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -174,11 +610,11 @@
                   "code": "",
                   "err": {
                     "message": "AssertionError: expected 500 to equal 404",
-                    "estack": "AssertionError: expected 500 to equal 404\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\GET-produtos-id\\GET-produtos-id-404.js:18:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+                    "estack": "AssertionError: expected 500 to equal 404\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\GET-produtos-id\\GET-produtos-id-404.js:30:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
                     "diff": "- 500\n+ 404\n"
                   },
-                  "uuid": "46c9fb7f-2629-47d4-8d79-4c6b80136df4",
-                  "parentUUID": "9a65ee74-6ca1-43e8-a9db-05c9e676a6ad",
+                  "uuid": "7a65c65b-22cd-4f31-bd7a-21b2522d37c9",
+                  "parentUUID": "aba17b19-7098-4a01-8576-91865c1e4088",
                   "isHook": false,
                   "skipped": false
                 },
@@ -186,7 +622,7 @@
                   "title": "GET /produtos/id - 404 Not found - Deleted 'Produto'",
                   "fullTitle": "Supersystem Tests get-produto-id-404 GET /produtos/id - 404 Not found - Deleted 'Produto'",
                   "timedOut": false,
-                  "duration": 13,
+                  "duration": 7,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -196,11 +632,11 @@
                   "code": "",
                   "err": {
                     "message": "AssertionError: expected 500 to equal 404",
-                    "estack": "AssertionError: expected 500 to equal 404\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\GET-produtos-id\\GET-produtos-id-404.js:27:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+                    "estack": "AssertionError: expected 500 to equal 404\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\test\\super-produtos\\GET-produtos-id\\GET-produtos-id-404.js:39:46\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\node_modules\\superagent\\lib\\node\\index.js:916:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:19:7)\n    at IncomingMessage.emit (node:events:538:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
                     "diff": "- 500\n+ 404\n"
                   },
-                  "uuid": "10af9c0b-74a3-4ef7-ae0d-084c6a8071b9",
-                  "parentUUID": "9a65ee74-6ca1-43e8-a9db-05c9e676a6ad",
+                  "uuid": "0bd7c489-02e1-41dd-9fa7-dfce82d315dc",
+                  "parentUUID": "aba17b19-7098-4a01-8576-91865c1e4088",
                   "isHook": false,
                   "skipped": false
                 }
@@ -208,18 +644,18 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "46c9fb7f-2629-47d4-8d79-4c6b80136df4",
-                "10af9c0b-74a3-4ef7-ae0d-084c6a8071b9"
+                "7a65c65b-22cd-4f31-bd7a-21b2522d37c9",
+                "0bd7c489-02e1-41dd-9fa7-dfce82d315dc"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 44,
+              "duration": 12,
               "root": false,
               "rootEmpty": false,
               "_timeout": 0
             },
             {
-              "uuid": "448fef81-32ff-4b62-b73b-505dbb1d853b",
+              "uuid": "78d6d861-9601-4918-9dde-e32c5a993522",
               "title": "get-produto-id-400",
               "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
               "file": "\\run\\full_tests.js",
@@ -230,7 +666,7 @@
                   "title": "GET /produtos/id - 400 Bad request - String id",
                   "fullTitle": "Supersystem Tests get-produto-id-400 GET /produtos/id - 400 Bad request - String id",
                   "timedOut": false,
-                  "duration": 7,
+                  "duration": 3,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -239,8 +675,8 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "b152fb7f-ae1f-4764-94af-4041171d56ea",
-                  "parentUUID": "448fef81-32ff-4b62-b73b-505dbb1d853b",
+                  "uuid": "8f00a476-8a70-4adb-bd30-2accf86be5b8",
+                  "parentUUID": "78d6d861-9601-4918-9dde-e32c5a993522",
                   "isHook": false,
                   "skipped": false
                 },
@@ -257,8 +693,8 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "5e0dafc3-f9d9-4b08-b2c1-759a225c0069",
-                  "parentUUID": "448fef81-32ff-4b62-b73b-505dbb1d853b",
+                  "uuid": "82caa9d4-956b-412e-b8b8-b564d68ebd20",
+                  "parentUUID": "78d6d861-9601-4918-9dde-e32c5a993522",
                   "isHook": false,
                   "skipped": false
                 },
@@ -266,7 +702,7 @@
                   "title": "GET /produtos/id - 400 Bad request - NaN id",
                   "fullTitle": "Supersystem Tests get-produto-id-400 GET /produtos/id - 400 Bad request - NaN id",
                   "timedOut": false,
-                  "duration": 8,
+                  "duration": 3,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -275,8 +711,8 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "698975dd-bb5b-468c-a74d-a64c81812fd0",
-                  "parentUUID": "448fef81-32ff-4b62-b73b-505dbb1d853b",
+                  "uuid": "6e9d56a7-5663-4a07-865e-42293a47c0c4",
+                  "parentUUID": "78d6d861-9601-4918-9dde-e32c5a993522",
                   "isHook": false,
                   "skipped": false
                 },
@@ -284,7 +720,7 @@
                   "title": "GET /produtos/id - 400 Bad request - Boolean id",
                   "fullTitle": "Supersystem Tests get-produto-id-400 GET /produtos/id - 400 Bad request - Boolean id",
                   "timedOut": false,
-                  "duration": 5,
+                  "duration": 3,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -293,40 +729,40 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "70f5af63-3588-43da-ac22-a84adda164ba",
-                  "parentUUID": "448fef81-32ff-4b62-b73b-505dbb1d853b",
+                  "uuid": "8024ce5e-cd81-4295-8782-c2585a378856",
+                  "parentUUID": "78d6d861-9601-4918-9dde-e32c5a993522",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "b152fb7f-ae1f-4764-94af-4041171d56ea",
-                "5e0dafc3-f9d9-4b08-b2c1-759a225c0069",
-                "698975dd-bb5b-468c-a74d-a64c81812fd0",
-                "70f5af63-3588-43da-ac22-a84adda164ba"
+                "8f00a476-8a70-4adb-bd30-2accf86be5b8",
+                "82caa9d4-956b-412e-b8b8-b564d68ebd20",
+                "6e9d56a7-5663-4a07-865e-42293a47c0c4",
+                "8024ce5e-cd81-4295-8782-c2585a378856"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 25,
+              "duration": 14,
               "root": false,
               "rootEmpty": false,
               "_timeout": 0
             },
             {
-              "uuid": "fe3f114b-977a-40aa-88eb-8e46f46cdb14",
-              "title": "delete-produto-id-200",
+              "uuid": "0143e555-01a9-44af-96e9-b326e77e7187",
+              "title": "get-cliente-id-200",
               "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
               "file": "\\run\\full_tests.js",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "DELETE /produtos/id - 200 success - Delete created product",
-                  "fullTitle": "Supersystem Tests delete-produto-id-200 DELETE /produtos/id - 200 success - Delete created product",
+                  "title": "GET /clientes/id - 200 success - Content existence validation (Unit)",
+                  "fullTitle": "Supersystem Tests get-cliente-id-200 GET /clientes/id - 200 success - Content existence validation (Unit)",
                   "timedOut": false,
-                  "duration": 9,
+                  "duration": 6,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -335,20 +771,78 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "088bcd97-4296-4d5a-91b6-f9f96b0ed2ff",
-                  "parentUUID": "fe3f114b-977a-40aa-88eb-8e46f46cdb14",
+                  "uuid": "b5d650be-44a8-42e5-b79e-bc377c903f3c",
+                  "parentUUID": "0143e555-01a9-44af-96e9-b326e77e7187",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "088bcd97-4296-4d5a-91b6-f9f96b0ed2ff"
+                "b5d650be-44a8-42e5-b79e-bc377c903f3c"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 9,
+              "duration": 6,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 0
+            },
+            {
+              "uuid": "9d71a745-b7e3-4708-a24e-cfc64da33091",
+              "title": "delete-produto-id-200",
+              "fullFile": "C:\\Users\\yansi\\Desktop\\SuperSystem\\Supersistem\\Tests\\test_api\\run\\full_tests.js",
+              "file": "\\run\\full_tests.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook: Creating 'protudo' to delete in \"delete-produto-id-200\"",
+                  "fullTitle": "Supersystem Tests delete-produto-id-200 \"before all\" hook: Creating 'protudo' to delete in \"delete-produto-id-200\"",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "d46b9c81-e6c5-4402-8a78-51307fc24476",
+                  "parentUUID": "9d71a745-b7e3-4708-a24e-cfc64da33091",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "DELETE /produtos/id - 200 success - Delete created product",
+                  "fullTitle": "Supersystem Tests delete-produto-id-200 DELETE /produtos/id - 200 success - Delete created product",
+                  "timedOut": false,
+                  "duration": 4,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "",
+                  "err": {},
+                  "uuid": "823b858a-54a3-41ff-a77f-812e2d5c160e",
+                  "parentUUID": "9d71a745-b7e3-4708-a24e-cfc64da33091",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "823b858a-54a3-41ff-a77f-812e2d5c160e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4,
               "root": false,
               "rootEmpty": false,
               "_timeout": 0
