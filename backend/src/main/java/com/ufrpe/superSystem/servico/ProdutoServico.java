@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,9 +23,9 @@ import com.ufrpe.superSystem.servico.excecao.RecursoNaoLocalizadoExcecao;
 
 @Service
 @Transactional
-public class ProdutoServico {	
-
-	// como o framework ja tem um gerenciador de depedencia pra gente essa anotação
+public class ProdutoServico {
+	
+	// como o framework ja tem um gerenciador de depedencia pra gente essa anota��o
 	// da conta de instanciar os objetos para chamar os metodos da interface
 	@Autowired
 	private ProdutoRepositorio produtoRepositorio;
@@ -35,7 +38,7 @@ public class ProdutoServico {
 				: Arrays.asList(categoriaRepositorio.getById(idCategoria));
 		Page<Produto> resultado = produtoRepositorio.buscar(categorias, nome, pageable);
 		// transformo a pagina em lista -> usa stream porque apesar de page ser um
-		// stream lista não é
+		// stream lista n�o �
 		produtoRepositorio.buscarCategoriasProdutos(resultado.getContent());
 		return resultado.map(x -> new ProdutoDTO(x, x.getCategorias()));
 	}
@@ -51,7 +54,11 @@ public class ProdutoServico {
 
 	@Transactional
 	public void deletar(Long id) {
-		produtoRepositorio.deleteById(id);
+		try {
+			produtoRepositorio.deleteById(id);
+		} catch (EmptyResultDataAccessException e) {
+			throw new RecursoNaoLocalizadoExcecao("Id nao localizado " + id);
+		}
 	}
 
 	@Transactional
@@ -64,10 +71,16 @@ public class ProdutoServico {
 
 	@Transactional
 	public ProdutoDTO editar(Long id, ProdutoDTO produtoDTO) {
-		Produto produto = produtoRepositorio.getById(id);
-		copiarDtoParaPrduto(produtoDTO, produto);
-		produto = produtoRepositorio.save(produto);
-		return new ProdutoDTO(produto);
+		
+		try {
+			Produto produto = produtoRepositorio.getById(id);
+			copiarDtoParaPrduto(produtoDTO, produto);
+			produto = produtoRepositorio.save(produto);
+			return new ProdutoDTO(produto);			
+		} catch(EntityNotFoundException e) {
+			throw new RecursoNaoLocalizadoExcecao("Id nao localizado " + id);
+		}
+		
 	}
 
 	private void copiarDtoParaPrduto(ProdutoDTO produtoDTO, Produto produto) {

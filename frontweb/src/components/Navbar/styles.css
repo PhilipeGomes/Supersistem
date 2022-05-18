@@ -14,8 +14,11 @@
 .main-menu {
   display: flex;
   font-size: 18px;
-  width: 380px;
-  justify-content: space-between;
+  /*width: 380px;
+  justify-content: space-between;*/
+  width: 55%; /*eventualmente precisaremos mudar*/
+  justify-content: space-evenly;
+  
 }
 
 .main-menu a {
@@ -31,3 +34,13 @@
 .main-menu a:hover {
   color: #fff;
 }
+
+/*.navbar-nav a:before
+{
+    content: "|";
+}
+
+.navbar-nav  a:after
+{
+    content: "|";
+}*/

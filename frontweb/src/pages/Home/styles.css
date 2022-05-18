@@ -143,3 +143,7 @@
 .carousel-control-next-icon::after {
   content: "";
 }
+
+.home-content-container button{
+  margin:0px;
+}

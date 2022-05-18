@@ -9,30 +9,27 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_cliente")
-public class Cliente implements Serializable{
+public class Cliente implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String cpf;
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "usuario_id")
+	private Usuario usuario;
 	private String telefone;
-	private String email;
 
 	public Cliente(){
 		
 	}
 
-	public Cliente(Long id, String nome, String cpf, String telefone, String email) {
-		this.id = id;
-		this.nome = nome;
-		this.cpf = cpf;
+	public Cliente(String telefone, Usuario usuario) {
+		this.usuario = usuario;
 		this.telefone = telefone;
-		this.email = email;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -41,20 +38,12 @@ public class Cliente implements Serializable{
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getTelefone() {
@@ -65,12 +54,4 @@ public class Cliente implements Serializable{
 		this.telefone = telefone;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-		
 }

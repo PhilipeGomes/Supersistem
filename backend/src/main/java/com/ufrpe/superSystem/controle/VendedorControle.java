@@ -27,14 +27,14 @@ public class VendedorControle {
 
 	@GetMapping
 	public ResponseEntity<Page<VendedorDTO>> buscarTodos(
-			@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
+			@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC) Pageable pageable) {
 		return ResponseEntity.status(HttpStatus.OK).body(vendedorServico.buscarTodos(pageable));
 	}
 	
-	@GetMapping(value = "/{id}")
-	public VendedorDTO buscarPeloId(@PathVariable Long id) {
-		return vendedorServico.buscarPeloId(id);
-	}
+//	@GetMapping(value = "/{id}")
+//	public VendedorDTO buscarPeloId(@PathVariable Long id) {
+//		return vendedorServico.buscarPeloId(id);
+//	}
 	
 	@PostMapping
 	public VendedorDTO salvarCliente(@RequestBody VendedorDTO dto) {

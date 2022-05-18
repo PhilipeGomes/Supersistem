@@ -1,7 +1,5 @@
 package com.ufrpe.superSystem.controle;
 
-import java.net.URI;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +15,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ufrpe.superSystem.dto.ClienteDTO;
 import com.ufrpe.superSystem.servico.ClienteServico;
@@ -32,22 +28,21 @@ public class ClienteControle {
 	
 	@GetMapping
 	public ResponseEntity<Page<ClienteDTO>> buscarTodos(
-			@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
-		return ResponseEntity.status(HttpStatus.OK).body(clienteServico.buscarTodos(pageable));
+			@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC) Pageable pageable) {
+		return ResponseEntity.ok().body(clienteServico.buscarTodos(pageable));
 	}
 	
-	@GetMapping(value = "/{id}")
-	public ResponseEntity<ClienteDTO> buscarPeloId(@PathVariable Long id) {
-		ClienteDTO dto =  clienteServico.buscarPeloId(id);
-		return ResponseEntity.ok().body(dto);
-	}
+
+//	@GetMapping(value = "/{id}")
+//	public ClienteDTO buscarPeloId(@PathVariable Long id) {
+//		return clienteServico.buscarPeloId(id);
+//	}
+//	
 	
 	@PostMapping
 	public ResponseEntity<ClienteDTO> salvarCliente(@Valid @RequestBody ClienteDTO dto) {
-		dto = clienteServico.salvar(dto);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(dto.getId()).toUri();
-		return ResponseEntity.created(uri).body(dto);
+		dto = clienteServico.salvar(dto);		
+		return ResponseEntity.status(201).body(dto);
 	}
 	
 	@PutMapping("/{id}/editar")

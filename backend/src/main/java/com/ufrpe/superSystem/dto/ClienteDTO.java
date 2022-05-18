@@ -1,5 +1,7 @@
 package com.ufrpe.superSystem.dto;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.validation.constraints.NotBlank;
 
@@ -12,46 +14,34 @@ import com.ufrpe.superSystem.modelos.Cliente;
 
 public class ClienteDTO {
 
-	private Long id;
-	
 	@NotBlank(message = "Campo obrigatorio")
 	private String nome;
-	
-	@Column(unique = true)
+
 	@NotBlank(message = "Campo obrigatorio")
-	private String cpf;
-	
+	@Column(unique = true)
+	private Long cpf;
+
 	private String telefone;
-	
-	@NotBlank(message = "Campo obrigatorio" )
+
+	@NotBlank(message = "Campo obrigatorio")
 	private String email;
 
 	public ClienteDTO() {
-
+		
 	}
 
 	public ClienteDTO(Cliente cliente) {
-		this.id = cliente.getId();
-		this.nome = cliente.getNome();
-		this.cpf = cliente.getCpf();
+//		this.nome = cliente.getNome();
+//		this.cpf = cliente.getCpf();
 		this.telefone = cliente.getTelefone();
-		this.email = cliente.getEmail();
+//		this.email = cliente.getEmail();
 	}
 
-	public ClienteDTO(Long id, String nome, String cpf, String telefone, String email) {
-		this.id = id;
+	public ClienteDTO(String nome, Long cpf, String telefone, String email) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.email = email;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getNome() {
@@ -62,11 +52,11 @@ public class ClienteDTO {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
+	public Long getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(String cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 
@@ -84,5 +74,24 @@ public class ClienteDTO {
 
 	public void setEmail(String email) {
 		this.email = email;
+
 	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(cpf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClienteDTO other = (ClienteDTO) obj;
+		return Objects.equals(cpf, other.cpf);
+	}
+
 }

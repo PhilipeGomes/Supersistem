@@ -10,39 +10,61 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_Vendedor")
-public class Vendedor implements Serializable{
+public class Vendedor implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	
+	@OneToOne(fetch = FetchType.EAGER)
+	private Usuario usuario;
+	private Integer qtd_vendas;
+	private Double  saldo_vendas;
+	private String  nivel;
 
 	public Vendedor(){
 		
 	}
 
-	public Vendedor(Long id, String nome) {
-		this.id = id;
-		this.nome = nome;
+	public Vendedor(Integer qtd_vendas, Double  saldo_vendas, String nivel, Usuario usuario) {
+		this.usuario = usuario;
+		this.qtd_vendas = qtd_vendas;
+		this.saldo_vendas = saldo_vendas;
+		this.nivel         = nivel;
 	}
 
-    public Long getId() {
-        return this.id;
-    }
+	public Usuario getUsuario() {
+		return usuario;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
-    public String getNome() {
-        return this.nome;
-    }
+	public Integer getQtd_vendas() {
+		return qtd_vendas;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public void setQtd_vendas(Integer qtd_vendas) {
+		this.qtd_vendas = qtd_vendas;
+	}
+
+	public Double getSaldo_vendas() {
+		return saldo_vendas;
+	}
+
+	public void setSaldo_vendas(Double saldo_vendas) {
+		this.saldo_vendas = saldo_vendas;
+	}
+
+	public String getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(String nivel) {
+		this.nivel = nivel;
+	}
+
 
 }

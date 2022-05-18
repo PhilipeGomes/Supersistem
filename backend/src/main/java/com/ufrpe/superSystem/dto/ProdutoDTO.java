@@ -69,6 +69,7 @@ public class ProdutoDTO {
 		categoria.forEach(cat -> this.categorias.add(new CategoriaDTO(cat)));
 	}
 
+
 	public Long getId() {
 		return id;
 	}
