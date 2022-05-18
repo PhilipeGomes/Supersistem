@@ -5,6 +5,8 @@ http://localhost:8080/produtos/1
 http://localhost:8080/vendedores
 http://localhost:8080/pedidos
 http://localhost:8080/clientes/1
+http://localhost:8080/usuarios
+http://localhost:8080/usuarios/1
 
 
 POST
@@ -89,7 +91,14 @@ http://localhost:8080/produtos/3/editar
     ]
 }
 
+http://localhost:8080/usuarios/6/editar
+{
+            "nome": "Michael Faraday",
+            "cpf": "114.222.333-46",
+            "email": "michael_faraday_2022@ufrpe.com"            
+}
+
 DELETE	
 http://localhost:8080/clientes/1/deletar
-
+http://localhost:8080/usuarios/1/deletar
 http://localhost:8080/produtos/2/deletar
