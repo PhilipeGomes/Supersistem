@@ -2,14 +2,22 @@ let get_produtos_200 = require('../test/super-produtos/GET-produtos/GET-produtos
 let get_produtos_id_200 = require('../test/super-produtos/GET-produtos-id/GET-produtos-id-200')
 let get_produtos_id_404 = require('../test/super-produtos/GET-produtos-id/GET-produtos-id-404')
 let get_produtos_id_400 = require('../test/super-produtos/GET-produtos-id/GET-produtos-id-400')
+let get_clientes_id_200 = require('../test/super-clientes/GET-clientes-id/GET-clientes-id-200')
+let get_clientes_id_404 = require('../test/super-clientes/GET-clientes-id/GET-clientes-id-404')
+let get_clientes_id_400 = require('../test/super-clientes/GET-clientes-id/GET-clientes-id-400')
 let post_produtos_200 = require('../test/super-produtos/POST-produtos/POST-produtos-200')
 let post_produtos_400 = require('../test/super-produtos/POST-produtos/POST-produtos-400')
 let put_produtos_200 = require('../test/super-produtos/PUT-produtos-id/PUT-produtos-id-200')
 let put_produtos_400 = require('../test/super-produtos/PUT-produtos-id/PUT-produtos-id-400')
+let put_clientes_200 = require('../test/super-clientes/PUT-clientes-id/PUT-clientes-id-200')
+let put_clientes_400 = require('../test/super-clientes/PUT-clientes-id/PUT-clientes-id-400')
 let delete_produtos_id_200 = require('../test/super-produtos/DELETE-produtos-id/DELETE-produtos-id-200')
+let delete_produtos_id_404 = require('../test/super-produtos/DELETE-produtos-id/DELETE-produtos-id-404')
+let delete_clientes_id_200 = require('../test/super-clientes/DELETE-clientes-id/DELETE-clientes-id-200')
+let delete_clientes_id_404 = require('../test/super-clientes/DELETE-clientes-id/DELETE-clientes-id-404')
 let get_clientes_200 = require('../test/super-clientes/GET-clientes/GET-clientes-200')
-let get_clientes_id_200 = require('../test/super-clientes/GET-clientes-id/GET-clientes-id-200')
 let post_clientes_200 = require('../test/super-clientes/POST-clientes/POST-clientes-200')
+let post_clientes_400 = require('../test/super-clientes/POST-clientes/POST-clientes-400')
 
 
 describe("Supersystem Tests", function(){
@@ -21,10 +29,15 @@ describe("Supersystem Tests", function(){
 
     //POST clientes
     describe('post-cliente-200', post_clientes_200)
+    describe('post-cliente-400', post_clientes_400)
 
     //PUT produtos-id
     describe('put-produto-id-200', put_produtos_200)
     describe('put-produto-id-400', put_produtos_400)
+
+    //PUT clientes-id
+    describe('put-cliente-id-200', put_clientes_200)
+    describe('put-cliente-id-400', put_clientes_400)
 
     //GET produtos
     describe('get-produto-200', get_produtos_200)
@@ -39,7 +52,14 @@ describe("Supersystem Tests", function(){
 
     //GET clientes-id
     describe('get-cliente-id-200', get_clientes_id_200)
+    describe('get-cliente-id-404', get_clientes_id_404)
+    describe('get-cliente-id-400', get_clientes_id_400)
 
     //DELETE produtos-id
     describe('delete-produto-id-200', delete_produtos_id_200)
+    describe('delete-produto-id-400', delete_produtos_id_404)
+
+    //DELETE clientes-id
+    describe('delete-cliente-id-200', delete_clientes_id_200)
+    describe('delete-cliente-id-400', delete_clientes_id_404)
 })

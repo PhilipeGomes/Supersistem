@@ -71,5 +71,31 @@ module.exports = function (){
                 done()
             })
     })
+    it("POST /produtos - 400 bad request - Invalid 'produto' request - Blank space (marca)", function (done){
+        chai.request(host)
+            .post('/produtos')
+            .send(config.invalid_produto_request_body_blank_space)
+            .end(function(err, res){
+                expect(err).to.be.null;
+                if (res.statusCode==200) {
+                    variables.produtos.invalids_posts_requests_ids_to_delete.push(res.body.id)
+                }
+                expect(res.statusCode).to.be.equal(400)
+                done()
+            })
+    })
+    it("POST /produtos - 400 bad request - Invalid 'produto' request - Empty paramiter (marca)", function (done){
+        chai.request(host)
+            .post('/produtos')
+            .send(config.invalid_produto_request_body_empty_paramiter)
+            .end(function(err, res){
+                expect(err).to.be.null;
+                if (res.statusCode==200) {
+                    variables.produtos.invalids_posts_requests_ids_to_delete.push(res.body.id)
+                }
+                expect(res.statusCode).to.be.equal(400)
+                done()
+            })
+    })
 
 }
