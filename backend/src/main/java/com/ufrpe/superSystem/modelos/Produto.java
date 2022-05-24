@@ -3,11 +3,13 @@ package com.ufrpe.superSystem.modelos;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -52,6 +54,10 @@ public class Produto implements Serializable {
     
     @OneToMany(mappedBy = "id.produto")
 	private Set<ItemPedido> itens = new HashSet<>();    
+    
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "tb_produto")
+    private List<Cesta> cestas;
     
     
     public Produto() {
